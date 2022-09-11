@@ -1,0 +1,260 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "СПУТНИКС основной ЦУП",
+        "description": "A downtown park that is the site of many of Chicago's favorite festivals and events"
+      },
+      "geometry": {
+        "coordinates": [
+          37.347121,
+          55.693183
+        ],
+        "type": "Point"
+      },
+      "id": "147ca9cd8d6583932ca5f8440fab160a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ситроникс",
+        "description": "A northside park that is home to the Lincoln Park Zoo"
+      },
+      "geometry": {
+        "coordinates": [
+          37.689905,
+          55.718659
+        ],
+        "type": "Point"
+      },
+      "id": "1f275d0ee0a1dbf921f69966e3b6cad0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Изобретариум Реутов",
+        "description": "A large park near in Chicago's North Lawndale neighborhood"
+      },
+      "geometry": {
+        "coordinates": [
+          37.855888,
+          55.759674
+        ],
+        "type": "Point"
+      },
+      "id": "55aca89c3ae961445db5e50bab43dbd6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Кванториум Королев",
+        "description": "A downtown park known for its art installations and unique architecture"
+      },
+      "geometry": {
+        "coordinates": [
+          37.834573,
+          55.910514
+        ],
+        "type": "Point"
+      },
+      "id": "7345e162dfac526b08411765901a3536"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "НИУ ВШЭ (МИЭМ)",
+        "description": "A park on the Illinois-Indiana border featuring a historic fieldhouse"
+      },
+      "geometry": {
+        "coordinates": [
+          37.410409,
+          55.803301
+        ],
+        "type": "Point"
+      },
+      "id": "75170fdbc6b161952bee7fc19f7598ba"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "РусТелнет",
+        "description": "A large park in Chicago's Austin neighborhood"
+      },
+      "geometry": {
+        "coordinates": [
+          37.339173,
+          55.684993
+        ],
+        "type": "Point"
+      },
+      "id": "86e65357ead8cf0bac743d2a5b4d93cf"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "ЦОД ОГМА г. Брянск",
+        "description": "A lakefront park on Chicago's south side"
+      },
+      "geometry": {
+        "coordinates": [
+          34.313626,
+          53.298629
+        ],
+        "type": "Point"
+      },
+      "id": "93ee1279aa639de12c2a993dee849cb9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Таватуй",
+        "description": "A lakeside park that was the site of the 1893 World's Fair"
+      },
+      "geometry": {
+        "coordinates": [
+          57.173304, 
+          60.201278
+        ],
+        "type": "Point"
+      },
+      "id": "c14f382203fb109b43904766a2da7915"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Сириус Прм",
+        "description": "A large park on Chicago's northwest side"
+      },
+      "geometry": {
+        "coordinates": [
+          58.010455, 
+          56.229443
+        ],
+        "type": "Point"
+      },
+      "id": "da583d614b7c26e2cab24b0123544f35"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Сириус Прм",
+        "description": "A large park on Chicago's northwest side"
+      },
+      "geometry": {
+        "coordinates": [
+          58.010455, 
+          56.229443
+        ],
+        "type": "Point"
+      },
+      "id": "da583d614b7c26e2cab24b0123544f35"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Сириус Прм",
+        "description": "A large park on Chicago's northwest side"
+      },
+      "geometry": {
+        "coordinates": [
+          58.010455, 
+          56.229443
+        ],
+        "type": "Point"
+      },
+      "id": "da583d614b7c26e2cab24b0123544f35"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Сириус Прм",
+        "description": "A large park on Chicago's northwest side"
+      },
+      "geometry": {
+        "coordinates": [
+          58.010455, 
+          56.229443
+        ],
+        "type": "Point"
+      },
+      "id": "da583d614b7c26e2cab24b0123544f35"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Сириус Прм",
+        "description": "A large park on Chicago's northwest side"
+      },
+      "geometry": {
+        "coordinates": [
+          58.010455, 
+          56.229443
+        ],
+        "type": "Point"
+      },
+      "id": "da583d614b7c26e2cab24b0123544f35"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Сириус Прм",
+        "description": "A large park on Chicago's northwest side"
+      },
+      "geometry": {
+        "coordinates": [
+          58.010455, 
+          56.229443
+        ],
+        "type": "Point"
+      },
+      "id": "da583d614b7c26e2cab24b0123544f35"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Сириус Прм",
+        "description": "A large park on Chicago's northwest side"
+      },
+      "geometry": {
+        "coordinates": [
+          58.010455, 
+          56.229443
+        ],
+        "type": "Point"
+      },
+      "id": "da583d614b7c26e2cab24b0123544f35"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Сириус Прм",
+        "description": "A large park on Chicago's northwest side"
+      },
+      "geometry": {
+        "coordinates": [
+          58.010455, 
+          56.229443
+        ],
+        "type": "Point"
+      },
+      "id": "da583d614b7c26e2cab24b0123544f35"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Сириус Прм",
+        "description": "A large park on Chicago's northwest side"
+      },
+      "geometry": {
+        "coordinates": [
+          58.010455, 
+          56.229443
+        ],
+        "type": "Point"
+      },
+      "id": "da583d614b7c26e2cab24b0123544f35"
+    }
+  ],
+  "type": "FeatureCollection"
+}
