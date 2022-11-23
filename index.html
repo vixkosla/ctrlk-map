@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +9,20 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
     <style>
-        body { 
-          margin: 0; 
-          padding: 0; 
+        body {
+            margin: 0;
+            padding: 0;
         }
-        #map { 
-          position: absolute; 
-          top: 0; 
-          bottom: 0; 
-          width: 100%; 
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
         }
-      </style>
+    </style>
 </head>
+
 <body>
     <div id="map"></div>
     <script>
@@ -27,149 +30,118 @@
         const map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/hookahlocator/cl7kyr6xl003614mdm198bykj',
-            center: [-87.661557, 41.893748],
+            center: [55.751244, 37.618423],
             zoom: 3.7
         })
 
-        map.on('load', () => {
-          map.loadImage(
-            'https://docs.mapbo x.com/mapbox-gl-js/assets/custom_marker.png',
-          (error, image) => {
-            if (error) throw error;
-            map.addImage('custom-marker', image);
-          });
-            
-          
-          map.addSource('earthquakes', {
-              type: 'geojson',
-              data: 'https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson',
-              cluster: true,
-              clusterMaxZoom: 14,
-              clusterRadius: 50
-          })
+        const images = [{
+                imageUrl: './icons/4.png',
+                id: 4
+            },
+            {
+                imageUrl: './icons/1.png',
+                id: 1
+            },
+            {
+                imageUrl: './icons/2.png',
+                id: 2
+            },
+            {
+                imageUrl: './icons/3.png',
+                id: 3
+            },
+            {
+                imageUrl: './icons/5.png',
+                id: 5
+            },
+        ]
 
-            map.addLayer({
-              id: 'unclustered-point',
-              type: 'symbol',
-              source: 'earthquakes',
-              layout: {
-                'icon-image': 'custom-marker',
-                'icon-size': 0.75
-              }
+        Promise.all(
+                images.map(img => new Promise((resolve, reject) => {
+                    map.loadImage(img.imageUrl, function(error, res) {
+                        map.addImage(img.id, res)
+                        resolve();
+                    })
+                }))
+            )
+            .then(function() {
+                map.addSource('towers', {
+                    type: 'geojson',
+                    data: './features.geojson',
+                    //   cluster: true,
+                    //   clusterMaxZoom: 14,
+                    //   clusterRadius: 50
+                })
+                // draw circle for every icon 
+                map.addLayer({
+                    id: 'unclustered-point-circle',
+                    type: 'circle',
+                    source: 'towers',
+                    paint: {
+                        'circle-color': '#E9F1F1',
+                        'circle-radius': 20
+                    }
+                })
+
+                //icons differeint 
+                map.addLayer({
+                    id: 'unclustered-point-ico-1',
+                    type: 'symbol',
+                    source: 'towers',
+//                    filter: ['==', 'icon', 1],
+                    layout: {
+                        'icon-image': ['get', 'icon'],
+                        'icon-size': 0.6,
+                        'icon-allow-overlap': true,
+                    }
+                })
+
+//                map.addLayer({
+//                    id: 'unclustered-point-ico-2',
+//                    type: 'symbol',
+//                    source: 'towers',
+//                    filter: ['==', 'icon', 2],
+//                    layout: {
+//                        'icon-image': ['get', 'icon'],
+//                        'icon-size': 0.02,
+//                        'icon-allow-overlap': true,
+//                    }
+//                })
+                //                map.addLayer({
+                //                    id: 'unclustered-point-ico',
+                //                    type: 'symbol',
+                //                    source: 'towers',
+                //                    filter: ['==', 'icon', '3'],
+                //                    layout: {
+                //                        'icon-image': 'image_3',
+                //                        'icon-size': 0.02,
+                //                        'icon-allow-overlap': true,
+                //                    }
+                //                }) map.addLayer({
+                //                    id: 'unclustered-point-ico',
+                //                    type: 'symbol',
+                //                    source: 'towers',
+                //                    filter: ['==', 'icon', '4'],
+                //                    layout: {
+                //                        'icon-image': 'image_4',
+                //                        'icon-size': 0.02,
+                //                        'icon-allow-overlap': true,
+                //                    }
+                //                })
+                //
+                //                map.addLayer({
+                //                    id: 'unclustered-point-ico',
+                //                    type: 'symbol',
+                //                    source: 'towers',
+                //                    filter: ['==', 'icon', '5'],
+                //                    layout: {
+                //                        'icon-image': 'image_5',
+                //                        'icon-size': 0.02,
+                //                        'icon-allow-overlap': true,
+                //                    }
+                //                })
+
+
             })
-
-            map.addLayer({
-            id: 'clusters-count-bg',
-            type: 'circle',
-            source: 'earthquakes',
-            filter: ['has', 'point_count'],
-            paint: {
-              // Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
-              // with three steps to implement three types of circles:
-              //   * Blue, 20px circles when point count is less than 100
-              //   * Yellow, 30px circles when point count is between 100 and 750
-              //   * Pink, 40px circles when point count is greater than or equal to 750
-              'circle-color': '#E9F1F1',
-              'circle-radius': [
-                'step',
-                ['get', 'point_count'],
-                20,
-                100,
-                30,
-                750,
-                40
-                ]
-              },
-              layout: {
-                // 'icon-ignore-placement': true
-              }
-            });
-
-            map.addLayer({
-              id: 'clusters',
-              type: 'symbol',
-              source: 'earthquakes',
-              filter: ['has', 'point_count'],
-              layout: {
-                    'icon-image':'custom-marker',
-                    'icon-allow-overlap': true,
-                    'icon-size': [
-                'step',
-                ['get', 'point_count'],
-                0.5,
-                100,
-                0.75,
-                750,
-                1
-                ]
-              }
-            })
-
-            map.addLayer({
-              id: 'cluster-count',
-              type: 'symbol',
-              source: 'earthquakes',
-              filter: ['has', 'point_count'],
-              layout: {
-                'text-field': 'x{point_count_abbreviated}',
-                'text-size': 16,
-                'text-font': ['Arial Unicode MS Regular'],
-                // 'placement': "bottom-start"
-                'text-offset': [1, 0.75]
-              }
-            })
-
-        });
-
-        
-
-
     </script>
-</body>
-</html>
-
-// const markers = {}
-// let markersOnScreen = {};
-
-// function updateMarkers() {
-//   const newMarkers = {};
-//   const features = map.querySourceFeatures('earthquakes');
-
-//   for (const feature of features) {
-//     const coords = feature.geometry.coordinates;
-//     const props = feature.properties;
-//     if(!props.cluster) continue;
-//     const id = props.cluster_id;
-
-//     let marker = markers[id];
-//     if(!marker) {
-//       const el = createClusterIcon(props);
-//       marker = markers[id] = new mapboxgl.Marker({
-//         element: el
-//       }).setLngLat(coords)
-//     }
-
-//     newMarkers[id] = marker;
-
-//     if (!markersOnScreen[id]) marker.addTo(map);
-//   }
-
-//   for (const id in markersOnScreen) {
-//     if (!newMarkers[id]) markersOnScreen[id].remove();
-//   }
-// }
-
-// map.on('render', () => {
-//   if (!map.isSourceLoaded('earthquakes')) return;
-//   updateMarkers();
-// });
-
-// function createClusterIcon(props) {
-//   const el = document.createElement('div');
-//   el.className = 'cluster_marker';
-//   el.style.backgroundImage = 'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png';
-//   el.style.width = '10px';
-//   el.style.height = '10px';
-
-//   return el;
-// }
+</body></html>
