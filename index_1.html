@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        mapboxgl.accessToken = "pk.eyJ1IjoiaG9va2FobG9jYXRvciIsImEiOiI5WnJEQTBBIn0.DrAlI7fhFaYr2RcrWWocgw";
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/hookahlocator/cl7kyr6xl003614mdm198bykj',
+            center: [55.751244, 37.618423],
+            zoom: 3.7
+        })
+
+        const images = [{
+                imageUrl: './icons/4.png',
+                id: 4
+            },
+            {
+                imageUrl: './icons/1.png',
+                id: 1
+            },
+            {
+                imageUrl: './icons/2.png',
+                id: 2
+            },
+            {
+                imageUrl: './icons/3.png',
+                id: 3
+            },
+            {
+                imageUrl: './icons/5.png',
+                id: 5
+            },
+        ]
+
+        Promise.all(
+                images.map(img => new Promise((resolve, reject) => {
+                    map.loadImage(img.imageUrl, function(error, res) {
+                        map.addImage(img.id, res)
+                        resolve();
+                    })
+                }))
+            )
+            .then(function() {
+                map.addSource('towers', {
+                    type: 'geojson',
+                    data: './features.geojson',
+                    //   cluster: true,
+                    //   clusterMaxZoom: 14,
+                    //   clusterRadius: 50
+                })
+                // draw circle for every icon 
+                map.addLayer({
+                    id: 'unclustered-point-circle',
+                    type: 'circle',
+                    source: 'towers',
+                    paint: {
+                        'circle-color': '#E9F1F1',
+                        'circle-radius': 20
+                    }
+                })
+
+                //icons differeint 
+                map.addLayer({
+                    id: 'unclustered-point-ico-1',
+                    type: 'symbol',
+                    source: 'towers',
+//                    filter: ['==', 'icon', 1],
+                    layout: {
+                        'icon-image': ['get', 'icon'],
+                        'icon-size': 0.6,
+                        'icon-allow-overlap': true,
+                    }
+                })
+
+//                map.addLayer({
+//                    id: 'unclustered-point-ico-2',
+//                    type: 'symbol',
+//                    source: 'towers',
+//                    filter: ['==', 'icon', 2],
+//                    layout: {
+//                        'icon-image': ['get', 'icon'],
+//                        'icon-size': 0.02,
+//                        'icon-allow-overlap': true,
+//                    }
+//                })
+                //                map.addLayer({
+                //                    id: 'unclustered-point-ico',
+                //                    type: 'symbol',
+                //                    source: 'towers',
+                //                    filter: ['==', 'icon', '3'],
+                //                    layout: {
+                //                        'icon-image': 'image_3',
+                //                        'icon-size': 0.02,
+                //                        'icon-allow-overlap': true,
+                //                    }
+                //                }) map.addLayer({
+                //                    id: 'unclustered-point-ico',
+                //                    type: 'symbol',
+                //                    source: 'towers',
+                //                    filter: ['==', 'icon', '4'],
+                //                    layout: {
+                //                        'icon-image': 'image_4',
+                //                        'icon-size': 0.02,
+                //                        'icon-allow-overlap': true,
+                //                    }
+                //                })
+                //
+                //                map.addLayer({
+                //                    id: 'unclustered-point-ico',
+                //                    type: 'symbol',
+                //                    source: 'towers',
+                //                    filter: ['==', 'icon', '5'],
+                //                    layout: {
+                //                        'icon-image': 'image_5',
+                //                        'icon-size': 0.02,
+                //                        'icon-allow-overlap': true,
+                //                    }
+                //                })
+
+
+            })
+    </script>
+</body></html>

@@ -33,12 +33,14 @@
 
         map.on('load', () => {
           map.loadImage(
-            'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+            'https://docs.mapbo x.com/mapbox-gl-js/assets/custom_marker.png',
           (error, image) => {
             if (error) throw error;
             map.addImage('custom-marker', image);
+          });
             
-            map.addSource('earthquakes', {
+          
+          map.addSource('earthquakes', {
               type: 'geojson',
               data: 'https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson',
               cluster: true,
@@ -117,57 +119,57 @@
               }
             })
 
-            // const markers = {}
-            // let markersOnScreen = {};
-
-            // function updateMarkers() {
-            //   const newMarkers = {};
-            //   const features = map.querySourceFeatures('earthquakes');
-
-            //   for (const feature of features) {
-            //     const coords = feature.geometry.coordinates;
-            //     const props = feature.properties;
-            //     if(!props.cluster) continue;
-            //     const id = props.cluster_id;
-
-            //     let marker = markers[id];
-            //     if(!marker) {
-            //       const el = createClusterIcon(props);
-            //       marker = markers[id] = new mapboxgl.Marker({
-            //         element: el
-            //       }).setLngLat(coords)
-            //     }
-
-            //     newMarkers[id] = marker;
-
-            //     if (!markersOnScreen[id]) marker.addTo(map);
-            //   }
-
-            //   for (const id in markersOnScreen) {
-            //     if (!newMarkers[id]) markersOnScreen[id].remove();
-            //   }
-            // }
-
-            // map.on('render', () => {
-            //   if (!map.isSourceLoaded('earthquakes')) return;
-            //   updateMarkers();
-            // });
-
-            // function createClusterIcon(props) {
-            //   const el = document.createElement('div');
-            //   el.className = 'cluster_marker';
-            //   el.style.backgroundImage = 'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png';
-            //   el.style.width = '10px';
-            //   el.style.height = '10px';
-
-            //   return el;
-            // }
-
-
-          });
         });
+
+        
 
 
     </script>
 </body>
 </html>
+
+// const markers = {}
+// let markersOnScreen = {};
+
+// function updateMarkers() {
+//   const newMarkers = {};
+//   const features = map.querySourceFeatures('earthquakes');
+
+//   for (const feature of features) {
+//     const coords = feature.geometry.coordinates;
+//     const props = feature.properties;
+//     if(!props.cluster) continue;
+//     const id = props.cluster_id;
+
+//     let marker = markers[id];
+//     if(!marker) {
+//       const el = createClusterIcon(props);
+//       marker = markers[id] = new mapboxgl.Marker({
+//         element: el
+//       }).setLngLat(coords)
+//     }
+
+//     newMarkers[id] = marker;
+
+//     if (!markersOnScreen[id]) marker.addTo(map);
+//   }
+
+//   for (const id in markersOnScreen) {
+//     if (!newMarkers[id]) markersOnScreen[id].remove();
+//   }
+// }
+
+// map.on('render', () => {
+//   if (!map.isSourceLoaded('earthquakes')) return;
+//   updateMarkers();
+// });
+
+// function createClusterIcon(props) {
+//   const el = document.createElement('div');
+//   el.className = 'cluster_marker';
+//   el.style.backgroundImage = 'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png';
+//   el.style.width = '10px';
+//   el.style.height = '10px';
+
+//   return el;
+// }
