@@ -21,6 +21,11 @@
             width: 100%;
         }
 
+        .mapboxgl-popup {
+            max-width: 400px;
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        }
+
     </style>
 </head>
 
@@ -34,6 +39,8 @@
             center: [55.751244, 37.618423],
             zoom: 3.7
         })
+
+
 
         const images = [{
                 imageUrl: './icons/4.png',
@@ -66,13 +73,17 @@
                 }))
             )
             .then(function() {
+
                 map.addSource('towers', {
                     type: 'geojson',
                     data: './features.geojson',
                     cluster: true,
                     clusterMaxZoom: 14,
-                    clusterRadius: 50
+                    clusterRadius: 50,
+                    clusterMinPoints: 2
                 })
+
+
                 // draw circle for every icon 
                 map.addLayer({
                     id: 'unclustered-point-circle',
@@ -144,7 +155,7 @@
                     filter: ['has', 'point_count'],
                     layout: {
                         'text-field': 'x{point_count_abbreviated}',
-                        'text-size': 14,
+                        'text-size': 12,
                         'text-font': ['Arial Unicode MS Regular'],
                         // 'placement': "bottom-start"
                         'text-offset': [
@@ -155,9 +166,22 @@
                             ['literal', [1.25, 1]],
                             10,
                             ['literal', [1.5, 1.25]]
-                        ]
+                        ],
+                    },
+                    paint: {
+                        'text-color': '#2D73E8',
                     }
                 })
+
+                map.on('click', (e) => {
+                    console.log('hey, красавчик')
+                })
+            
+            
+
+
+
+
 
                 //                map.addLayer({
                 //                    id: 'unclustered-point-ico-2',
@@ -206,6 +230,38 @@
 
 
             })
+
+
+
+
+        //        map.on('click', 'towers', (e) => {
+        //            // Copy coordinates array.
+        //            const coordinates = e.features[0].geometry.coordinates.slice();
+        //            const description = e.features[0].properties.title;
+        //            console.log(coordinates, description);
+        //
+        //            // Ensure that if the map is zoomed out such that multiple
+        //            // copies of the feature are visible, the popup appears
+        //            // over the copy being pointed to.
+        //            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        //                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        //            }
+        //
+        //            new mapboxgl.Popup()
+        //                .setLngLat(coordinates)
+        //                .setHTML(description)
+        //                .addTo(map);
+        //        });
+        //
+        //        // Change the cursor to a pointer when the mouse is over the places layer.
+        //        map.on('mouseenter', 'towers', () => {
+        //            map.getCanvas().style.cursor = 'pointer';
+        //        });
+        //
+        //        // Change it back to a pointer when it leaves.
+        //        map.on('mouseleave', 'towers', () => {
+        //            map.getCanvas().style.cursor = '';
+        //        });
 
     </script>
 </body>
