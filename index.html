@@ -22,9 +22,99 @@
         }
 
         .mapboxgl-popup {
-            max-width: 400px;
+/*            width: 400px;*/
             font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            /*            background-color: aqua;*/
+            text-align: center;
+/*            color: black;*/
+/*            text-transform: uppercase;*/
+/*            font-weight: 700;*/
+            /*            background-color: rgb(89, 229, 247, 0.25;*/
+            /*            background-color: blue;*/
+
+
         }
+
+        .popup {
+            /*            color: #62F1F3;*/
+
+        }
+
+        /*
+        .mapboxgl-popup {
+            padding-bottom: 50px;
+        }
+*/
+
+        .mapboxgl-popup-close-button {
+            display: none;
+
+        }
+
+        .mapboxgl-popup-content {
+            /*            font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;*/
+            padding: 0;
+            width: 180px;
+            border: 1px solid #62F1F3;
+            color: #2D73E8;
+            /*                        background-color: rgb(89, 229, 247, 0.25;*/
+/*            background-color: aqua;*/
+/*            opacity: 0.25;*/
+
+        }
+
+/*
+        .mapboxgl-popup-content h3 {
+            background: #91c949;
+            color: #fff;
+            margin: 0;
+            padding: 10px;
+            border-radius: 3px 3px 0 0;
+            font-weight: 700;
+            margin-top: -15px;
+        }
+*/
+
+/*
+        .mapboxgl-popup-content h4 {
+            margin: 0;
+            padding: 10px;
+            font-weight: 400;
+        }
+*/
+
+        .mapboxgl-popup-content div {
+            padding: 10px;
+        }
+
+/*
+        .mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
+        .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+        .mapboxgl-popup-anchor-center .mapboxgl-popup-tip,
+        .mapboxgl-popup-anchor-left .mapboxgl-popup-tip,
+        .mapboxgl-popup-anchor-right .mapboxgl-popup-tip,
+        .mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip,
+        .mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+        .mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip,
+        .mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip {
+            display: none !important;
+        }
+*/
+
+        .mapboxgl-popup-anchor {
+            /*            background-color: #62F1F3;*/
+        }
+
+        .mapboxgl-popup-anchor-top>.mapboxgl-popup-content {
+/*            margin-top: 15px;*/
+
+        }
+
+        .mapboxgl-popup-anchor-top>.mapboxgl-popup-tip {
+/*            border-bottom-color: #91c949;*/
+        }
+
+        /*        .mapxboxgl-popup-content {}*/
 
     </style>
 </head>
@@ -91,7 +181,7 @@
                     source: 'towers',
                     paint: {
                         'circle-color': '#E9F1F1',
-                        'circle-radius': 15
+                        'circle-radius': 20
                     }
                 })
 
@@ -119,9 +209,9 @@
                         'circle-radius': [
                             'step',
                             ['get', 'point_count'],
-                            20,
+                            23,
                             5,
-                            25,
+                            27,
                             10,
                             30
                         ]
@@ -139,11 +229,11 @@
                         'icon-size': [
                             'step',
                             ['get', 'point_count'],
-                            0.75,
+                            0.7,
                             5,
-                            1,
+                            0.85,
                             10,
-                            1.5
+                            1
                         ]
                     }
                 })
@@ -173,11 +263,41 @@
                     }
                 })
 
-                map.on('click', (e) => {
-                    console.log('hey, красавчик')
-                })
-            
-            
+                //                map.on('click', 'unclustered-point', (e) => {
+                //                    console.log('hey, красавчик')
+                //                })
+
+                map.on('click', 'unclustered-point', (e) => {
+                    // Copy coordinates array.
+                    const coordinates = e.features[0].geometry.coordinates.slice();
+                    const description = e.features[0].properties.title;
+                    console.log(coordinates, description);
+
+                    // Ensure that if the map is zoomed out such that multiple
+                    // copies of the feature are visible, the popup appears
+                    // over the copy being pointed to.
+                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                    }
+
+                    new mapboxgl.Popup()
+                        .setLngLat(coordinates)
+                        .setHTML(`<div class="popup">${description}<\div>`)
+                        .addTo(map);
+                });
+
+                // Change the cursor to a pointer when the mouse is over the places layer.
+                map.on('mouseenter', 'towers', () => {
+                    map.getCanvas().style.cursor = 'pointer';
+                });
+
+                // Change it back to a pointer when it leaves.
+                map.on('mouseleave', 'towers', () => {
+                    map.getCanvas().style.cursor = '';
+                });
+
+
+
 
 
 
@@ -230,38 +350,6 @@
 
 
             })
-
-
-
-
-        //        map.on('click', 'towers', (e) => {
-        //            // Copy coordinates array.
-        //            const coordinates = e.features[0].geometry.coordinates.slice();
-        //            const description = e.features[0].properties.title;
-        //            console.log(coordinates, description);
-        //
-        //            // Ensure that if the map is zoomed out such that multiple
-        //            // copies of the feature are visible, the popup appears
-        //            // over the copy being pointed to.
-        //            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-        //                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        //            }
-        //
-        //            new mapboxgl.Popup()
-        //                .setLngLat(coordinates)
-        //                .setHTML(description)
-        //                .addTo(map);
-        //        });
-        //
-        //        // Change the cursor to a pointer when the mouse is over the places layer.
-        //        map.on('mouseenter', 'towers', () => {
-        //            map.getCanvas().style.cursor = 'pointer';
-        //        });
-        //
-        //        // Change it back to a pointer when it leaves.
-        //        map.on('mouseleave', 'towers', () => {
-        //            map.getCanvas().style.cursor = '';
-        //        });
 
     </script>
 </body>
