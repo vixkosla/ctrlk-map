@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Map</title>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
     <style>
         body {
@@ -22,13 +23,13 @@
         }
 
         .mapboxgl-popup {
-/*            width: 400px;*/
+            /*            width: 400px;*/
             font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
             /*            background-color: aqua;*/
             text-align: center;
-/*            color: black;*/
-/*            text-transform: uppercase;*/
-/*            font-weight: 700;*/
+            /*            color: black;*/
+            /*            text-transform: uppercase;*/
+            /*            font-weight: 700;*/
             /*            background-color: rgb(89, 229, 247, 0.25;*/
             /*            background-color: blue;*/
 
@@ -58,12 +59,12 @@
             border: 1px solid #62F1F3;
             color: #2D73E8;
             /*                        background-color: rgb(89, 229, 247, 0.25;*/
-/*            background-color: aqua;*/
-/*            opacity: 0.25;*/
+            /*            background-color: aqua;*/
+            /*            opacity: 0.25;*/
 
         }
 
-/*
+        /*
         .mapboxgl-popup-content h3 {
             background: #91c949;
             color: #fff;
@@ -75,7 +76,7 @@
         }
 */
 
-/*
+        /*
         .mapboxgl-popup-content h4 {
             margin: 0;
             padding: 10px;
@@ -87,7 +88,7 @@
             padding: 10px;
         }
 
-/*
+        /*
         .mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
         .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
         .mapboxgl-popup-anchor-center .mapboxgl-popup-tip,
@@ -106,29 +107,136 @@
         }
 
         .mapboxgl-popup-anchor-top>.mapboxgl-popup-content {
-/*            margin-top: 15px;*/
+            /*            margin-top: 15px;*/
 
         }
 
         .mapboxgl-popup-anchor-top>.mapboxgl-popup-tip {
-/*            border-bottom-color: #91c949;*/
+            /*            border-bottom-color: #91c949;*/
         }
 
         /*        .mapxboxgl-popup-content {}*/
+        .listing-group {
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
+            border-radius: 3px;
+            max-width: 20%;
+            color: #fff;
+        }
 
+        .listing-group input[type='checkbox']:first-child+label {
+            border-radius: 3px 3px 0 0;
+        }
+
+        .listing-group label:last-child {
+            border-radius: 0 0 3px 3px;
+            border: none;
+        }
+
+        .listing-group input[type='checkbox'] {
+            display: none;
+        }
+
+        .listing-group input[type='checkbox']+label {
+            background-color: #3386c0;
+            display: block;
+            cursor: pointer;
+            padding: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        }
+
+        .listing-group input[type='checkbox']+label {
+            background-color: #3386c0;
+            text-transform: capitalize;
+        }
+
+        .listing-group input[type='checkbox']+label:hover,
+        .listing-group input[type='checkbox']:checked+label {
+            background-color: #4ea0da;
+        }
+
+        .listing-group input[type='checkbox']:checked+label:before {
+            content: '✔';
+            margin-right: 5px;
+        }
     </style>
 </head>
 
 <body>
     <div id="map"></div>
+    <nav id="listing-group" class="listing-group">
+        <input type="checkbox" id="1" checked="checked">
+        <label for="1">Информация 1</label>
+
+        <input type="checkbox" id="2" checked="checked">
+        <label for="2">Информация 2</label>
+
+        <input type="checkbox" id="0" checked="checked">
+        <label for="0">Информация 3</label>
+
+        <input type="checkbox" id="4" checked="checked">
+        <label for="4">Информация 4</label>
+
+        <input type="checkbox" id="5" checked="checked">
+        <label for="5">Информация 5</label>
+    </nav>
+
     <script>
+        //        var fs = require('fs')
+
+
+        //        console.log(mata['features'])
+
+        //        let marray = mata.features.filter(el = el.icon == '1')
+        //        console.log(marray);
+
+
+
+
+
+        //        fs.readFile("./features.geojson", (err, data) => {
+        //            if (err) throw err;
+        //            else {
+        //                console.log(data)
+        //            }
+        //        })
+
+        const navGroup = document.querySelector(".listing-group")
+
+
+
+
+
         mapboxgl.accessToken = "pk.eyJ1IjoiaG9va2FobG9jYXRvciIsImEiOiI5WnJEQTBBIn0.DrAlI7fhFaYr2RcrWWocgw";
+
         const map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/hookahlocator/cl7kyr6xl003614mdm198bykj',
             center: [55.751244, 37.618423],
             zoom: 3.7
         })
+
+        //        const filterGroup = document.getElementById('filter-group');
+        //
+        //        for (let i = 0; i < 4; i++) {
+        //            const dataId = `инфомрация ${i}`
+        //
+        //            const input = document.createElement('input');
+        //            input.type = 'checkbox';
+        //            input.id = dataId;
+        //            input.checked = true;
+        //            filterGroup.appendChild(input);
+        //
+        //            const label = document.createElement('label');
+        //            label.setAttribute('for', i);
+        //            label.textContent = dataId;
+        //            filterGroup.appendChild(label);
+        //        }
+
 
 
 
@@ -163,6 +271,9 @@
                 }))
             )
             .then(function() {
+
+
+
 
                 map.addSource('towers', {
                     type: 'geojson',
@@ -271,7 +382,12 @@
                     // Copy coordinates array.
                     const coordinates = e.features[0].geometry.coordinates.slice();
                     const description = e.features[0].properties.title;
-                    console.log(coordinates, description);
+
+                    let information = Object.values(e.features[0].properties);
+                    //                    information.pop().pop();
+                    console.log(e.features[0].properties);
+
+                    //                    console.log(coordinates, description);
 
                     // Ensure that if the map is zoomed out such that multiple
                     // copies of the feature are visible, the popup appears
@@ -284,7 +400,8 @@
                         .setLngLat(coordinates)
                         .setHTML(`<div class="popup">${description}<\div>`)
                         .addTo(map);
-                });
+                })
+
 
                 // Change the cursor to a pointer when the mouse is over the places layer.
                 map.on('mouseenter', 'towers', () => {
@@ -297,61 +414,96 @@
                 });
 
 
-
-
-
-
-
-
-                //                map.addLayer({
-                //                    id: 'unclustered-point-ico-2',
-                //                    type: 'symbol',
-                //                    source: 'towers',
-                //                    filter: ['==', 'icon', 2],
-                //                    layout: {
-                //                        'icon-image': ['get', 'icon'],
-                //                        'icon-size': 0.02,
-                //                        'icon-allow-overlap': true,
-                //                    }
-                //                })
-                //                map.addLayer({
-                //                    id: 'unclustered-point-ico',
-                //                    type: 'symbol',
-                //                    source: 'towers',
-                //                    filter: ['==', 'icon', '3'],
-                //                    layout: {
-                //                        'icon-image': 'image_3',
-                //                        'icon-size': 0.02,
-                //                        'icon-allow-overlap': true,
-                //                    }
-                //                }) map.addLayer({
-                //                    id: 'unclustered-point-ico',
-                //                    type: 'symbol',
-                //                    source: 'towers',
-                //                    filter: ['==', 'icon', '4'],
-                //                    layout: {
-                //                        'icon-image': 'image_4',
-                //                        'icon-size': 0.02,
-                //                        'icon-allow-overlap': true,
-                //                    }
-                //                })
+                //                fetch("./features.geojson")
+                //                    .then(res => res.json())
+                //                    .then(data => mata = data).then(() => console.log(mata))
+                //                    .then(() => {
+                //                        console.log('hello')
                 //
-                //                map.addLayer({
-                //                    id: 'unclustered-point-ico',
-                //                    type: 'symbol',
-                //                    source: 'towers',
-                //                    filter: ['==', 'icon', '5'],
-                //                    layout: {
-                //                        'icon-image': 'image_5',
-                //                        'icon-size': 0.02,
-                //                        'icon-allow-overlap': true,
-                //                    }
-                //                })
+                //
+                //                        //                data[]
+                //                        //                map.getSource('towers').setData()
+                //
+                //                    })
+                //                map.setFilter(
+                //                    ['unclustered-point'], ['all', ['==', 'icon', '0']]
+                //                );
+                //                map.setFilter(
+                //                    ['unclustered-point-circle'], ['all', ['==', 'icon', '0']]
+                //                );
+                //                map.setFilter(
+                //                    ['clusters-count-bg'], ['all', ['==', 'icon', '0']]
+                //                );
+                //                map.setFilter(
+                //                    ['clusters'], ['all', ['==', 'icon', '0']]
+                //                );
+                //                map.setFilter(
+                //                    ['cluster-count'], ['all', ['==', 'icon', '0']]
+                // );
 
+                // const filterIcon = 4;
+                //
+                // filterAllLayers();
+                //
+                // function filterAllLayers() {
+                //
+                // }
 
             })
 
-    </script>
-</body>
 
-</html>
+        fetch("./features.geojson")
+            .then(res => res.json())
+            .then(data => mata = data).then(() => console.log(mata))
+            .then(() => {
+
+                const inputs = document.querySelectorAll('input')
+
+                navGroup.addEventListener('change', (e) => {
+                    console.log('hello')
+                    console.log(mata.features)
+                    //                    console.log(inputGroup)
+
+                    let conditions = [];
+                    let maga = []
+
+                    for (input of inputs) {
+                        if (input.checked) {
+                            conditions.push(input.id)
+                        }
+                        //                        input.checked = true;
+                    }
+                    console.log(conditions)
+                    mata.features.forEach((el) => {
+                        //                        console.log(el.properties.icon)
+                        for (condition of conditions) {
+                            if (condition == el.properties.icon)
+                                maga.push(el)
+                        }
+                        //                        conditions.includes(el.properties.icon)
+                    })
+                    console.log(maga)
+                    map.getSource('towers').setData({
+                        "type": "FeatureCollection",
+                        "features": maga
+                    })
+
+
+                })
+
+                //                data[]
+
+            })
+
+
+
+        //        for (input of inputGroup) {
+        //            input.addEventListener('change', (e) => {
+        //                console.log('hello');
+        //            })
+        //
+        //        }
+
+        //        console.log(mata)
+    </script>
+</body></html>
