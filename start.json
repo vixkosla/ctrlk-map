@@ -1,1276 +1,1237 @@
-[
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "СПУТНИКС \nосновной ЦУП",
-            "equipment": "",
-            "adress": "Москва",
-            "nickname": "R2ANF",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "Активная",
-            "icon": 2,
-            "sign": 1.2
-        },
-        "geometry": {
-            "coordinates": [
-                37.347121,
-                55.693183
-            ],
-            "type": "Point"
-        },
-        "id": 0
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Ситроникс",
-            "equipment": "",
-            "adress": "Москва",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 401-402  ",
-            "status": "В планах",
-            "icon": 2,
-            "sign": 1.2
-        },
-        "geometry": {
-            "coordinates": [
-                37.689905,
-                55.718659
-            ],
-            "type": "Point"
-        },
-        "id": 1
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Изобретариум Реутов",
-            "equipment": "",
-            "adress": "\nРеутов",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "Активная",
-            "icon": 1,
-            "sign": 1
-        },
-        "geometry": {
-            "coordinates": [
-                37.855888,
-                55.759674
-            ],
-            "type": "Point"
-        },
-        "id": 2
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Королёв",
-            "equipment": "",
-            "adress": "Королёв",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "Активная",
-            "icon": 1,
-            "sign": 1
-        },
-        "geometry": {
-            "coordinates": [
-                37.834573,
-                55.910514
-            ],
-            "type": "Point"
-        },
-        "id": 3
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "НИУ ВШЭ (МИЭМ)",
-            "equipment": "",
-            "adress": "Москва",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "Активная",
-            "icon": 2,
-            "sign": 1.2
-        },
-        "geometry": {
-            "coordinates": [
-                37.410409,
-                55.803301
-            ],
-            "type": "Point"
-        },
-        "id": 4
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "РусТелнет",
-            "equipment": "",
-            "adress": "Москва",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 401-402  ",
-            "status": "Активная",
-            "icon": 2,
-            "sign": 1.2
-        },
-        "geometry": {
-            "coordinates": [
-                37.339173,
-                55.684993
-            ],
-            "type": "Point"
-        },
-        "id": 5
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "ЦОД ОГМА г. Брянск ",
-            "equipment": "",
-            "adress": "Брянск",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "В планах",
-            "icon": 1,
-            "sign": 1
-        },
-        "geometry": {
-            "coordinates": [
-                34.313626,
-                53.298629
-            ],
-            "type": "Point"
-        },
-        "id": 6
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Таватуй",
-            "equipment": "",
-            "adress": "Екатеринбург",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "Активная",
-            "icon": 1,
-            "sign": 1
-        },
-        "geometry": {
-            "coordinates": [
-                60.201278,
-                57.173304
-            ],
-            "type": "Point"
-        },
-        "id": 7
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Сириус Прм",
-            "equipment": "",
-            "adress": "Пермь",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "В планах",
-            "icon": 1,
-            "sign": 1
-        },
-        "geometry": {
-            "coordinates": [
-                56.229443,
-                58.010455
-            ],
-            "type": "Point"
-        },
-        "id": 8
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "МАН",
-            "equipment": "",
-            "adress": "Россия, Республика Саха (Якутия), муниципальный район Хангаласский улус, село Чапаево",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "Активная",
-            "icon": 1,
-            "sign": 1
-        },
-        "geometry": {
-            "coordinates": [
-                129.38950616668862,
-                61.66305708526612
-            ],
-            "type": "Point"
-        },
-        "id": 9
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "ЦОД Салехард ",
-            "equipment": "",
-            "adress": "Салехард",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "В планах",
-            "icon": 2,
-            "sign": 1.2
-        },
-        "geometry": {
-            "coordinates": [
-                66.602775,
-                66.533207
-            ],
-            "type": "Point"
-        },
-        "id": 10
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "ДВФУ",
-            "equipment": "",
-            "adress": "Владивосток",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "Активная",
-            "icon": 1,
-            "sign": 1
-        },
-        "geometry": {
-            "coordinates": [
-                131.893865,
-                43.024418
-            ],
-            "type": "Point"
-        },
-        "id": 11
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Китеж+",
-            "equipment": "",
-            "adress": "Санкт-Петербург",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "Активная",
-            "icon": 1,
-            "sign": 1
-        },
-        "geometry": {
-            "coordinates": [
-                30.317232,
-                59.992437
-            ],
-            "type": "Point"
-        },
-        "id": 12
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "ВКА им.Можайского (СПБ)",
-            "equipment": "",
-            "adress": "Санкт-Петербург",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "В планах",
-            "icon": 2,
-            "sign": 1.2
-        },
-        "geometry": {
-            "coordinates": [
-                30.283498,
-                59.956251
-            ],
-            "type": "Point"
-        },
-        "id": 13
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "БФУ им. Канта",
-            "equipment": "",
-            "adress": "Калининград",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "Активная",
-            "icon": 4,
-            "sign": 1.4
-        },
-        "geometry": {
-            "coordinates": [
-                20.527525,
-                54.724428
-            ],
-            "type": "Point"
-        },
-        "id": 14
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Мурманск",
-            "equipment": "",
-            "adress": "Мурманск",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "В планах",
-            "icon": 4,
-            "sign": 1.4
-        },
-        "geometry": {
-            "coordinates": [
-                33.074918,
-                68.970663
-            ],
-            "type": "Point"
-        },
-        "id": 15
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Узбекистан",
-            "equipment": "",
-            "adress": "Ташкент",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "Активная",
-            "icon": 1,
-            "sign": 1
-        },
-        "geometry": {
-            "coordinates": [
-                69.20796,
-                41.348823
-            ],
-            "type": "Point"
-        },
-        "id": 16
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Малайзия",
-            "equipment": "",
-            "adress": "Куала-Лумпур",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 401-402  ",
-            "status": "В планах",
-            "icon": 2,
-            "sign": 1.1
-        },
-        "geometry": {
-            "coordinates": [
-                101.661838,
-                3.114558
-            ],
-            "type": "Point"
-        },
-        "id": 17
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "КузГТУ",
-            "equipment": "",
-            "adress": "Весенняя ул., 28, Кемерово",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "В планах",
-            "icon": 2,
-            "sign": 1.2
-        },
-        "geometry": {
-            "coordinates": [
-                86.077261,
-                55.34813
-            ],
-            "type": "Point"
-        },
-        "id": 18
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Белоруссия ГИС",
-            "equipment": "",
-            "adress": "ул. Сурганова 6\nМинск\nБеларусь",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "В планах",
-            "icon": 2,
-            "sign": 1.2
-        },
-        "geometry": {
-            "coordinates": [
-                27.603441,
-                53.92012
-            ],
-            "type": "Point"
-        },
-        "id": 19
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "сафу",
-            "equipment": "",
-            "adress": "Архангельскк",
-            "nickname": "",
-            "range": "X",
-            "frequencies": "Прием 8, 10 ГГц",
-            "status": "В планах",
-            "icon": 5,
-            "sign": 2
-        },
-        "geometry": {
-            "coordinates": [
-                40.548847,
-                64.528982
-            ],
-            "type": "Point"
-        },
-        "id": 20
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "нии тп",
-            "equipment": "",
-            "adress": "Москва",
-            "nickname": "",
-            "range": "X, L",
-            "frequencies": "Прием 1-2 ГГц, 10 ГГц",
-            "status": "В планах",
-            "icon": 5,
-            "sign": 2
-        },
-        "geometry": {
-            "coordinates": [
-                37.622468,
-                55.862939
-            ],
-            "type": "Point"
-        },
-        "id": 21
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Орленок",
-            "equipment": "",
-            "adress": "п. Новомихайловский",
-            "nickname": "",
-            "range": "X",
-            "frequencies": "Прием 10 ГГц",
-            "status": "Активная",
-            "icon": 5,
-            "sign": 2
-        },
-        "geometry": {
-            "coordinates": [
-                38.846558,
-                44.252398
-            ],
-            "type": "Point"
-        },
-        "id": 22
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "МИФИ",
-            "equipment": "",
-            "adress": "Москва",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "В планах",
-            "icon": 2,
-            "sign": 1.2
-        },
-        "geometry": {
-            "coordinates": [
-                37.6644,
-                55.649901
-            ],
-            "type": "Point"
-        },
-        "id": 23
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "АУЭС Казахстан",
-            "equipment": "",
-            "adress": "Алматы",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "В планах",
-            "icon": 2,
-            "sign": 1.2
-        },
-        "geometry": {
-            "coordinates": [
-                76.931559,
-                43.234641
-            ],
-            "type": "Point"
-        },
-        "id": 24
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Абакан",
-            "equipment": "",
-            "adress": "Абакан",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "В планах",
-            "icon": 1,
-            "sign": 1
-        },
-        "geometry": {
-            "coordinates": [
-                91.442396,
-                53.721152
-            ],
-            "type": "Point"
-        },
-        "id": 25
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "ЯНАО Салехард",
-            "equipment": "",
-            "adress": "Салехард",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "В планах",
-            "icon": 1,
-            "sign": 1
-        },
-        "geometry": {
-            "coordinates": [
-                66.614507,
-                66.529866
-            ],
-            "type": "Point"
-        },
-        "id": 26
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Колледж Годовикова",
-            "equipment": "",
-            "adress": "Москва",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
-            "status": "В планах",
-            "icon": 1,
-            "sign": 1
-        },
-        "geometry": {
-            "coordinates": [
-                37.516981,
-                55.823257
-            ],
-            "type": "Point"
-        },
-        "id": 27
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Groupe Telnet",
-            "equipment": "",
-            "adress": "Тунис",
-            "nickname": "",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146 \nПередача 401-402  ",
-            "status": "Активная",
-            "icon": 2,
-            "sign": 1.2
-        },
-        "geometry": {
-            "coordinates": [
-                10.246029,
-                36.840914
-            ],
-            "type": "Point"
-        },
-        "id": 28
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "",
-            "equipment": "",
-            "adress": "",
-            "nickname": "",
-            "range": "",
-            "frequencies": "",
-            "status": "",
-            "icon": null,
-            "sign": null
-        },
-        "geometry": {
-            "coordinates": [
-                0
-            ],
-            "type": "Point"
-        },
-        "id": 29
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "",
-            "equipment": "",
-            "adress": "",
-            "nickname": "",
-            "range": "",
-            "frequencies": "",
-            "status": "",
-            "icon": null,
-            "sign": null
-        },
-        "geometry": {
-            "coordinates": [
-                0
-            ],
-            "type": "Point"
-        },
-        "id": 30
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "МФЮА",
-            "equipment": "",
-            "adress": "Москва",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                37.549777,
-                55.64828
-            ],
-            "type": "Point"
-        },
-        "id": 31
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "ЦДАиК ДОСААФ России",
-            "equipment": "",
-            "adress": "Москва",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                37.54939,
-                55.797397
-            ],
-            "type": "Point"
-        },
-        "id": 32
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Академия Калашников, Ижевск",
-            "equipment": "",
-            "adress": "Ижевск",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                53.195617,
-                56.857775
-            ],
-            "type": "Point"
-        },
-        "id": 33
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Кингисепп (Обу)",
-            "equipment": "",
-            "adress": "188480 Ленинградская обл., г. Кингисепп, пр. К. Маркса, д. 63",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                28.624029,
-                59.377214
-            ],
-            "type": "Point"
-        },
-        "id": 34
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "АУЭС, Казахстан",
-            "equipment": "",
-            "adress": "ул. Байтурсынова, 126/1, Алматы",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                76.931559,
-                43.234641
-            ],
-            "type": "Point"
-        },
-        "id": 35
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Калининград (Обу)",
-            "equipment": "",
-            "adress": "ул. Гайдара, 6, Калининград",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                20.491013,
-                54.736055
-            ],
-            "type": "Point"
-        },
-        "id": 36
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Невинномысск (Обу)",
-            "equipment": "",
-            "adress": "ул. Белово, 4, Невинномысск",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                41.931274,
-                44.63874
-            ],
-            "type": "Point"
-        },
-        "id": 37
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "РИРВ (СЗРЦ Алмаз-Антей, СПБ)",
-            "equipment": "",
-            "adress": "просп. Обуховской Обороны, 120ЕЦ, Санкт-Петербург",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                30.488244,
-                59.857011
-            ],
-            "type": "Point"
-        },
-        "id": 38
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Детский центр Баговещенск (Обу)",
-            "equipment": "",
-            "adress": "",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                127.534611,
-                50.257456
-            ],
-            "type": "Point"
-        },
-        "id": 39
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Наукоград Кольцово (Новосибирск)",
-            "equipment": "",
-            "adress": "Россия, Новосибирская область, рабочий посёлок Кольцово, Никольский проспект",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                83.179744,
-                54.942498
-            ],
-            "type": "Point"
-        },
-        "id": 40
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Омск (Обу)",
-            "equipment": "",
-            "adress": "ул. Петра Осминина, 34, посёлок Чкаловский, Омск",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                73.464843,
-                54.972398
-            ],
-            "type": "Point"
-        },
-        "id": 41
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Воронеж, ЦОД \"Орион 36\"  ",
-            "equipment": "",
-            "adress": "проспект Труда, 65к2",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                39.180427,
-                51.680221
-            ],
-            "type": "Point"
-        },
-        "id": 42
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Чебоксары, ЦОДМ \"Эткер\" ",
-            "equipment": "",
-            "adress": "Гражданская ул., 50А, Чебоксары",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                47.20392,
-                56.124664
-            ],
-            "type": "Point"
-        },
-        "id": 43
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "ГУАП СПб",
-            "equipment": "",
-            "adress": "\nул. Якубовича, 26, Санкт-Петербург",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                30.294441,
-                59.931099
-            ],
-            "type": "Point"
-        },
-        "id": 44
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Красногорск ",
-            "equipment": "",
-            "adress": "Вокзальная ул., 17А, Красногорск",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                37.339073,
-                55.813337
-            ],
-            "type": "Point"
-        },
-        "id": 45
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Пермь ",
-            "equipment": "",
-            "adress": "ул. 25 Октября, 64/1, Пермь",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                56.259745,
-                58.004164
-            ],
-            "type": "Point"
-        },
-        "id": 46
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Евпатория ",
-            "equipment": "",
-            "adress": "ул. Полупанова, 27, Евпатория",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                33.340005,
-                45.188192
-            ],
-            "type": "Point"
-        },
-        "id": 47
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Калуга ",
-            "equipment": "",
-            "adress": "Тарутинская ул., 70, Калуга",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                36.292316,
-                54.554627
-            ],
-            "type": "Point"
-        },
-        "id": 48
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "МАМИ",
-            "equipment": "",
-            "adress": "Большая Семёновская ул., 38",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                37.7113,
-                55.781444
-            ],
-            "type": "Point"
-        },
-        "id": 49
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Уфа ",
-            "equipment": "",
-            "adress": "ул. Кирова, 43, Уфа",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                55.96076,
-                54.729698
-            ],
-            "type": "Point"
-        },
-        "id": 50
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Тамбов ",
-            "equipment": "",
-            "adress": "Державинская ул., 10, Тамбов",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                41.453849,
-                52.724558
-            ],
-            "type": "Point"
-        },
-        "id": 51
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Самара ",
-            "equipment": "",
-            "adress": "просп. Масленникова, 37, Самара",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                50.159338,
-                53.207859
-            ],
-            "type": "Point"
-        },
-        "id": 52
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Сколково",
-            "equipment": "",
-            "adress": "Большой бул., 42, стр. 1, Западный административный округ, Можайский район, Инновационный центр Сколково",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                37.34762,
-                55.69209
-            ],
-            "type": "Point"
-        },
-        "id": 53
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Нальчик",
-            "equipment": "",
-            "adress": "ул. 2-й Таманской Дивизии, 33А, Нальчик",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                43.63044,
-                43.480077
-            ],
-            "type": "Point"
-        },
-        "id": 54
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Якутск ",
-            "equipment": "",
-            "adress": "ул. Кирова, 20, Якутск",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                129.724399,
-                62.031098
-            ],
-            "type": "Point"
-        },
-        "id": 55
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Набережные Челны ",
-            "equipment": "",
-            "adress": "Машиностроительная ул., 91Б, Набережные Челны",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-146",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                52.449364,
-                55.738029
-            ],
-            "type": "Point"
-        },
-        "id": 56
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "title": "Кванториум Екатеринбург",
-            "equipment": "",
-            "adress": "ул. Бориса Ельцина, 3, Екатеринбург",
-            "nickname": "не нужно",
-            "range": "УКВ",
-            "frequencies": "Прием 435-438, 136-147",
-            "status": "Активная",
-            "icon": 0,
-            "sign": 0
-        },
-        "geometry": {
-            "coordinates": [
-                60.592147,
-                56.844702
-            ],
-            "type": "Point"
-        },
-        "id": 57
-    }
-]
+{
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "СПУТНИКС \nосновной ЦУП",
+                "mode": "прием/передача",
+                "adress": "Москва",
+                "nickname": "R2ANF",
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "Активная",
+                "type": "Завиток-М",
+                "icon": 2,
+                "sign": "1.2"
+            },
+            "geometry": {
+                "coordinates": [
+                    37.347121,
+                    55.693183
+                ],
+                "type": "Point"
+            },
+            "id": 0
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Ситроникс",
+                "mode": "прием/передача",
+                "adress": "Москва",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 401-402  ",
+                "status": "В планах",
+                "type": "Завиток-М",
+                "icon": 2,
+                "sign": "1.2"
+            },
+            "geometry": {
+                "coordinates": [
+                    37.689905,
+                    55.718659
+                ],
+                "type": "Point"
+            },
+            "id": 1
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Изобретариум Реутов",
+                "mode": "прием/передача",
+                "adress": "\nРеутов",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "Активная",
+                "type": "Завиток",
+                "icon": 1,
+                "sign": "1.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    37.855888,
+                    55.759674
+                ],
+                "type": "Point"
+            },
+            "id": 2
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Королёв",
+                "mode": "прием/передача",
+                "adress": "Королёв",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "Активная",
+                "type": "Завиток",
+                "icon": 1,
+                "sign": "1.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    37.834573,
+                    55.910514
+                ],
+                "type": "Point"
+            },
+            "id": 3
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "НИУ ВШЭ (МИЭМ)",
+                "mode": "прием/передача",
+                "adress": "Москва",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "Активная",
+                "type": "Завиток-М",
+                "icon": 2,
+                "sign": "1.2"
+            },
+            "geometry": {
+                "coordinates": [
+                    37.410409,
+                    55.803301
+                ],
+                "type": "Point"
+            },
+            "id": 4
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "РусТелнет",
+                "mode": "прием/передача",
+                "adress": "Москва",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 401-402  ",
+                "status": "Активная",
+                "type": "Завиток-М",
+                "icon": 2,
+                "sign": "1.2"
+            },
+            "geometry": {
+                "coordinates": [
+                    37.339173,
+                    55.684993
+                ],
+                "type": "Point"
+            },
+            "id": 5
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ЦОД ОГМА г. Брянск ",
+                "mode": "прием/передача",
+                "adress": "Брянск",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "В планах",
+                "type": "Завиток",
+                "icon": 1,
+                "sign": "1.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    34.313626,
+                    53.298629
+                ],
+                "type": "Point"
+            },
+            "id": 6
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Таватуй",
+                "mode": "прием/передача",
+                "adress": "Екатеринбург",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "Активная",
+                "type": "Завиток",
+                "icon": 1,
+                "sign": "1.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    60.201278,
+                    57.173304
+                ],
+                "type": "Point"
+            },
+            "id": 7
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Сириус Прм",
+                "mode": "прием/передача",
+                "adress": "Пермь",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "В планах",
+                "type": "Завиток",
+                "icon": 1,
+                "sign": "1.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    56.229443,
+                    58.010455
+                ],
+                "type": "Point"
+            },
+            "id": 8
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "МАН",
+                "mode": "прием/передача",
+                "adress": "Россия, Республика Саха (Якутия), муниципальный район Хангаласский улус, село Чапаево",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "Активная",
+                "type": "Завиток",
+                "icon": 1,
+                "sign": "1.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    129.38950616668862,
+                    61.66305708526612
+                ],
+                "type": "Point"
+            },
+            "id": 9
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ЦОД Салехард ",
+                "mode": "прием/передача",
+                "adress": "Салехард",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "В планах",
+                "type": "Завиток-М",
+                "icon": 2,
+                "sign": "1.2"
+            },
+            "geometry": {
+                "coordinates": [
+                    66.602775,
+                    66.533207
+                ],
+                "type": "Point"
+            },
+            "id": 10
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ДВФУ",
+                "mode": "прием/передача",
+                "adress": "Владивосток",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "Активная",
+                "type": "Завиток",
+                "icon": 1,
+                "sign": "1.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    131.893865,
+                    43.024418
+                ],
+                "type": "Point"
+            },
+            "id": 11
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Китеж+",
+                "mode": "прием/передача",
+                "adress": "Санкт-Петербург",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "Активная",
+                "type": "Завиток",
+                "icon": 1,
+                "sign": "1.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    30.317232,
+                    59.992437
+                ],
+                "type": "Point"
+            },
+            "id": 12
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ВКА им.Можайского (СПБ)",
+                "mode": "прием/передача",
+                "adress": "Санкт-Петербург",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "В планах",
+                "type": "Завиток-М",
+                "icon": 2,
+                "sign": "1.2"
+            },
+            "geometry": {
+                "coordinates": [
+                    30.283498,
+                    59.956251
+                ],
+                "type": "Point"
+            },
+            "id": 13
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "БФУ им. Канта",
+                "mode": "прием/передача",
+                "adress": "Калининград",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "Активная",
+                "type": "Helix",
+                "icon": 4,
+                "sign": "1.4"
+            },
+            "geometry": {
+                "coordinates": [
+                    20.527525,
+                    54.724428
+                ],
+                "type": "Point"
+            },
+            "id": 14
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Мурманск",
+                "mode": "прием/передача",
+                "adress": "Мурманск",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "В планах",
+                "type": "Helix",
+                "icon": 4,
+                "sign": "1.4"
+            },
+            "geometry": {
+                "coordinates": [
+                    33.074918,
+                    68.970663
+                ],
+                "type": "Point"
+            },
+            "id": 15
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Узбекистан",
+                "mode": "прием/передача",
+                "adress": "Ташкент",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "Активная",
+                "type": "Завиток",
+                "icon": 1,
+                "sign": "1.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    69.20796,
+                    41.348823
+                ],
+                "type": "Point"
+            },
+            "id": 16
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Малайзия",
+                "mode": "прием/передача",
+                "adress": "Куала-Лумпур",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 401-402  ",
+                "status": "В планах",
+                "type": "Завиток-М",
+                "icon": 2,
+                "sign": "1.1"
+            },
+            "geometry": {
+                "coordinates": [
+                    101.661838,
+                    3.114558
+                ],
+                "type": "Point"
+            },
+            "id": 17
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "КузГТУ",
+                "mode": "прием/передача",
+                "adress": "Весенняя ул., 28, Кемерово",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "В планах",
+                "type": "Завиток-М",
+                "icon": 2,
+                "sign": "1.2"
+            },
+            "geometry": {
+                "coordinates": [
+                    86.077261,
+                    55.34813
+                ],
+                "type": "Point"
+            },
+            "id": 18
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Белоруссия ГИС",
+                "mode": "прием/передача",
+                "adress": "ул. Сурганова 6\r\nМинск\r\nБеларусь",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "В планах",
+                "type": "Завиток-М",
+                "icon": 2,
+                "sign": "1.2"
+            },
+            "geometry": {
+                "coordinates": [
+                    27.603441,
+                    53.92012
+                ],
+                "type": "Point"
+            },
+            "id": 19
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "сафу",
+                "mode": "приём",
+                "adress": "Архангельскк",
+                "nickname": null,
+                "frequencies": "Прием 8, 10 ГГц",
+                "status": "В планах",
+                "type": "Унискан",
+                "icon": 5,
+                "sign": "2.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    40.548847,
+                    64.528982
+                ],
+                "type": "Point"
+            },
+            "id": 20
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "нии тп",
+                "mode": "приём",
+                "adress": "Москва",
+                "nickname": null,
+                "frequencies": "Прием 1-2 ГГц, 10 ГГц",
+                "status": "В планах",
+                "type": "Унискан",
+                "icon": 5,
+                "sign": "2.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    37.622468,
+                    55.862939
+                ],
+                "type": "Point"
+            },
+            "id": 21
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Орленок",
+                "mode": "приём",
+                "adress": "п. Новомихайловский",
+                "nickname": null,
+                "frequencies": "Прием 10 ГГц",
+                "status": "Активная",
+                "type": "Унискан",
+                "icon": 5,
+                "sign": "2.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    38.846558,
+                    44.252398
+                ],
+                "type": "Point"
+            },
+            "id": 22
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "МИФИ",
+                "mode": "прием/передача",
+                "adress": "Москва",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "В планах",
+                "type": "Завиток-М",
+                "icon": 2,
+                "sign": "1.2"
+            },
+            "geometry": {
+                "coordinates": [
+                    37.6644,
+                    55.649901
+                ],
+                "type": "Point"
+            },
+            "id": 23
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "АУЭС Казахстан",
+                "mode": "прием/передача",
+                "adress": "Алматы",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "В планах",
+                "type": "Завиток-М",
+                "icon": 2,
+                "sign": "1.2"
+            },
+            "geometry": {
+                "coordinates": [
+                    76.931559,
+                    43.234641
+                ],
+                "type": "Point"
+            },
+            "id": 24
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Абакан",
+                "mode": "прием/передача",
+                "adress": "Абакан",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "В планах",
+                "type": "Завиток",
+                "icon": 1,
+                "sign": "1.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    91.442396,
+                    53.721152
+                ],
+                "type": "Point"
+            },
+            "id": 25
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ЯНАО Салехард",
+                "mode": "прием/передача",
+                "adress": "Салехард",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "В планах",
+                "type": "Завиток",
+                "icon": 1,
+                "sign": "1.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    66.614507,
+                    66.529866
+                ],
+                "type": "Point"
+            },
+            "id": 26
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Колледж Годовикова",
+                "mode": "прием/передача",
+                "adress": "Москва",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 435-438  ",
+                "status": "В планах",
+                "type": "Завиток",
+                "icon": 1,
+                "sign": "1.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    37.516981,
+                    55.823257
+                ],
+                "type": "Point"
+            },
+            "id": 27
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Groupe Telnet",
+                "mode": "прием/передача",
+                "adress": "Тунис",
+                "nickname": null,
+                "frequencies": "Прием 435-438, 136-146 \nПередача 401-402  ",
+                "status": "Активная",
+                "type": "Завиток-М",
+                "icon": 2,
+                "sign": "1.2"
+            },
+            "geometry": {
+                "coordinates": [
+                    10.246029,
+                    36.840914
+                ],
+                "type": "Point"
+            },
+            "id": 28
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "МФЮА",
+                "mode": "приём",
+                "adress": "Москва",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    37.549777,
+                    55.64828
+                ],
+                "type": "Point"
+            },
+            "id": 29
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ЦДАиК ДОСААФ России",
+                "mode": "приём",
+                "adress": "Москва",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    37.54939,
+                    55.797397
+                ],
+                "type": "Point"
+            },
+            "id": 30
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Академия Калашников, Ижевск",
+                "mode": "приём",
+                "adress": "Ижевск",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    53.195617,
+                    56.857775
+                ],
+                "type": "Point"
+            },
+            "id": 31
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Кингисепп (Обу)",
+                "mode": "приём",
+                "adress": "188480 Ленинградская обл., г. Кингисепп, пр. К. Маркса, д. 63",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    28.624029,
+                    59.377214
+                ],
+                "type": "Point"
+            },
+            "id": 32
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "АУЭС, Казахстан",
+                "mode": "приём",
+                "adress": "ул. Байтурсынова, 126/1, Алматы",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    76.931559,
+                    43.234641
+                ],
+                "type": "Point"
+            },
+            "id": 33
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Калининград (Обу)",
+                "mode": "приём",
+                "adress": "ул. Гайдара, 6, Калининград",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    20.491013,
+                    54.736055
+                ],
+                "type": "Point"
+            },
+            "id": 34
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Невинномысск (Обу)",
+                "mode": "приём",
+                "adress": "ул. Белово, 4, Невинномысск",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    41.931274,
+                    44.63874
+                ],
+                "type": "Point"
+            },
+            "id": 35
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "РИРВ (СЗРЦ Алмаз-Антей, СПБ)",
+                "mode": "приём",
+                "adress": "просп. Обуховской Обороны, 120ЕЦ, Санкт-Петербург",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    30.488244,
+                    59.857011
+                ],
+                "type": "Point"
+            },
+            "id": 36
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Детский центр Баговещенск (Обу)",
+                "mode": "приём",
+                "adress": null,
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    127.534611,
+                    50.257456
+                ],
+                "type": "Point"
+            },
+            "id": 37
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Наукоград Кольцово (Новосибирск)",
+                "mode": "приём",
+                "adress": "Россия, Новосибирская область, рабочий посёлок Кольцово, Никольский проспект",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    83.179744,
+                    54.942498
+                ],
+                "type": "Point"
+            },
+            "id": 38
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Омск (Обу)",
+                "mode": "приём",
+                "adress": "ул. Петра Осминина, 34, посёлок Чкаловский, Омск",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    73.464843,
+                    54.972398
+                ],
+                "type": "Point"
+            },
+            "id": 39
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Воронеж, ЦОД \"Орион 36\"  ",
+                "mode": "приём",
+                "adress": "проспект Труда, 65к2",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    39.180427,
+                    51.680221
+                ],
+                "type": "Point"
+            },
+            "id": 40
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Чебоксары, ЦОДМ \"Эткер\" ",
+                "mode": "приём",
+                "adress": "Гражданская ул., 50А, Чебоксары",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    47.20392,
+                    56.124664
+                ],
+                "type": "Point"
+            },
+            "id": 41
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ГУАП СПб",
+                "mode": "приём",
+                "adress": "\r\nул. Якубовича, 26, Санкт-Петербург",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    30.294441,
+                    59.931099
+                ],
+                "type": "Point"
+            },
+            "id": 42
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Красногорск ",
+                "mode": "приём",
+                "adress": "Вокзальная ул., 17А, Красногорск",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    37.339073,
+                    55.813337
+                ],
+                "type": "Point"
+            },
+            "id": 43
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Пермь ",
+                "mode": "приём",
+                "adress": "ул. 25 Октября, 64/1, Пермь",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    56.259745,
+                    58.004164
+                ],
+                "type": "Point"
+            },
+            "id": 44
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Евпатория ",
+                "mode": "приём",
+                "adress": "ул. Полупанова, 27, Евпатория",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    33.340005,
+                    45.188192
+                ],
+                "type": "Point"
+            },
+            "id": 45
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Калуга ",
+                "mode": "приём",
+                "adress": "Тарутинская ул., 70, Калуга",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    36.292316,
+                    54.554627
+                ],
+                "type": "Point"
+            },
+            "id": 46
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "МАМИ",
+                "mode": "приём",
+                "adress": "Большая Семёновская ул., 38",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    37.7113,
+                    55.781444
+                ],
+                "type": "Point"
+            },
+            "id": 47
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Уфа ",
+                "mode": "приём",
+                "adress": "ул. Кирова, 43, Уфа",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    55.96076,
+                    54.729698
+                ],
+                "type": "Point"
+            },
+            "id": 48
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Тамбов ",
+                "mode": "приём",
+                "adress": "Державинская ул., 10, Тамбов",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    41.453849,
+                    52.724558
+                ],
+                "type": "Point"
+            },
+            "id": 49
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Самара ",
+                "mode": "приём",
+                "adress": "просп. Масленникова, 37, Самара",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    50.159338,
+                    53.207859
+                ],
+                "type": "Point"
+            },
+            "id": 50
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Сколково",
+                "mode": "приём",
+                "adress": "Большой бул., 42, стр. 1, Западный административный округ, Можайский район, Инновационный центр Сколково",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    37.34762,
+                    55.69209
+                ],
+                "type": "Point"
+            },
+            "id": 51
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Нальчик",
+                "mode": "приём",
+                "adress": "ул. 2-й Таманской Дивизии, 33А, Нальчик",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    43.63044,
+                    43.480077
+                ],
+                "type": "Point"
+            },
+            "id": 52
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Якутск ",
+                "mode": "приём",
+                "adress": "ул. Кирова, 20, Якутск",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    129.724399,
+                    62.031098
+                ],
+                "type": "Point"
+            },
+            "id": 53
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Набережные Челны ",
+                "mode": "приём",
+                "adress": "Машиностроительная ул., 91Б, Набережные Челны",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-146",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    52.449364,
+                    55.738029
+                ],
+                "type": "Point"
+            },
+            "id": 54
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Кванториум Екатеринбург",
+                "mode": "приём",
+                "adress": "ул. Бориса Ельцина, 3, Екатеринбург",
+                "nickname": "не нужно",
+                "frequencies": "Прием 435-438, 136-147",
+                "status": "Активная",
+                "type": "Вьюнок",
+                "icon": 0,
+                "sign": "0.0"
+            },
+            "geometry": {
+                "coordinates": [
+                    60.592147,
+                    56.844702
+                ],
+                "type": "Point"
+            },
+            "id": 55
+        }
+    ],
+    "type": "FeatureCollection"
+}

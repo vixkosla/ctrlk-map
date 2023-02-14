@@ -6,186 +6,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Map</title>
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
-
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        #map {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .mapboxgl-popup {
-            /*            width: 400px;*/
-            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-            /*            background-color: aqua;*/
-            text-align: center;
-            /*            color: black;*/
-            /*            text-transform: uppercase;*/
-            /*            font-weight: 700;*/
-            /*            background-color: rgb(89, 229, 247, 0.25;*/
-            /*            background-color: blue;*/
-
-
-        }
-
-        .popup {
-            /*            color: #62F1F3;*/
-
-        }
-
-        /*
-        .mapboxgl-popup {
-            padding-bottom: 50px;
-        }
-*/
-
-        .mapboxgl-popup-close-button {
-            display: none;
-
-        }
-
-        .mapboxgl-popup-content {
-            /*            font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;*/
-            padding: 0;
-            width: 180px;
-            border: 1px solid #62F1F3;
-            color: #2D73E8;
-            /*                        background-color: rgb(89, 229, 247, 0.25;*/
-            /*            background-color: aqua;*/
-            /*            opacity: 0.25;*/
-
-        }
-
-        /*
-        .mapboxgl-popup-content h3 {
-            background: #91c949;
-            color: #fff;
-            margin: 0;
-            padding: 10px;
-            border-radius: 3px 3px 0 0;
-            font-weight: 700;
-            margin-top: -15px;
-        }
-*/
-
-        /*
-        .mapboxgl-popup-content h4 {
-            margin: 0;
-            padding: 10px;
-            font-weight: 400;
-        }
-*/
-
-        .mapboxgl-popup-content div {
-            padding: 10px;
-        }
-
-        /*
-        .mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
-        .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
-        .mapboxgl-popup-anchor-center .mapboxgl-popup-tip,
-        .mapboxgl-popup-anchor-left .mapboxgl-popup-tip,
-        .mapboxgl-popup-anchor-right .mapboxgl-popup-tip,
-        .mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip,
-        .mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
-        .mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip,
-        .mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip {
-            display: none !important;
-        }
-*/
-
-        .mapboxgl-popup-anchor {
-            /*            background-color: #62F1F3;*/
-        }
-
-        .mapboxgl-popup-anchor-top>.mapboxgl-popup-content {
-            /*            margin-top: 15px;*/
-
-        }
-
-        .mapboxgl-popup-anchor-top>.mapboxgl-popup-tip {
-            /*            border-bottom-color: #91c949;*/
-        }
-
-        /*        .mapxboxgl-popup-content {}*/
-        .listing-group {
-            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 1;
-            border-radius: 3px;
-            max-width: 20%;
-            color: #fff;
-        }
-
-        .listing-group input[type='checkbox']:first-child+label {
-            border-radius: 3px 3px 0 0;
-        }
-
-        .listing-group label:last-child {
-            border-radius: 0 0 3px 3px;
-            border: none;
-        }
-
-        .listing-group input[type='checkbox'] {
-            display: none;
-        }
-
-        .listing-group input[type='checkbox']+label {
-            background-color: #3386c0;
-            display: block;
-            cursor: pointer;
-            padding: 10px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-        }
-
-        .listing-group input[type='checkbox']+label {
-            background-color: #3386c0;
-            text-transform: capitalize;
-        }
-
-        .listing-group input[type='checkbox']+label:hover,
-        .listing-group input[type='checkbox']:checked+label {
-            background-color: #4ea0da;
-        }
-
-        .listing-group input[type='checkbox']:checked+label:before {
-            content: '✔';
-            margin-right: 5px;
-        }
-    </style>
+    <link href="style.css" rel='stylesheet' />
 </head>
 
 <body>
     <div id="map"></div>
     <nav id="listing-group" class="listing-group">
-        <input type="checkbox" id="1" checked="checked">
-        <label for="1">Информация 1</label>
+       
+        <div class="listing-group-li">
+            <div class="listing-group-title">
+                <input class="title" type="checkbox" id="status">
+                <label for="status">Статус</label>
+                
+            </div>
+            <div class="listing-group-filter status">
 
-        <input type="checkbox" id="2" checked="checked">
-        <label for="2">Информация 2</label>
+                <input class="filter" data-filtername="status" type="checkbox" id="Активная" checked="checked">
+                <label class="filter" for="Активная">Активная</label>
 
-        <input type="checkbox" id="0" checked="checked">
-        <label for="0">Информация 3</label>
+                <input class="filter" data-filtername="status" type="checkbox" id="В процессе" checked="checked">
+                <label class="filter" for="В процессе">В процессе</label>
 
-        <input type="checkbox" id="4" checked="checked">
-        <label for="4">Информация 4</label>
+                <input class="filter" data-filtername="status" type="checkbox" id="В планах" checked="checked">
+                <label class="filter" for="В планах">В планах</label>
+            </div>
+        </div>
 
-        <input type="checkbox" id="5" checked="checked">
-        <label for="5">Информация 5</label>
+        <div class="listing-group-li">
+            <div class="listing-group-title">
+                <input class="title" type="checkbox" id="mode">
+                <label for="mode">По приему/передаче</label>
+            </div>
+            <div class="listing-group-filter mode">
+               
+                <input class="filter" data-filtername="mode" type="checkbox" id="Прием" checked="checked">
+                <label for="Прием">Прием</label>
+
+                <input class="filter" data-filtername="mode" type="checkbox" id="Прием/Передача" checked="checked">
+                <label for="Прием/Передача">Прием/Передача</label>
+                
+            </div>
+        </div>
+
+        
+        <div class="listing-group-li">
+            <div class="listing-group-title">
+                <input class="title" type="checkbox" id="type">
+                <label for="type">Тип станции</label>
+            </div>
+            <div class="listing-group-filter type">
+               
+                <input data-filtername="type" class="filter" type="checkbox" id="Завиток" checked="checked">
+                <label for="Завиток">Завиток</label>
+                
+                <input data-filtername="type" class="filter" type="checkbox" id="Завиток-М" checked="checked">
+                <label for="Завиток-М">Завиток-М</label>
+                
+                <input data-filtername="type" class="filter" type="checkbox" id="Унискан" checked="checked">
+                <label for="Унискан">Унискан</label>
+                
+                <input data-filtername="type" class="filter" type="checkbox" id="Вьюнок" checked="checked">
+                <label for="Вьюнок">Вьюнок</label>
+            </div>
+        </div>
+
+<!--
+        <div class="listing-group-li">
+            <div id="По частоте" class="listing-group-title">
+                <input class="title" type="checkbox" id="По частоте" checked="checked">
+                <label class="title" for="1">По частоте</label>
+            </div>
+            <div id="По частоте" class="listing-group-filter">
+                <input type="checkbox" id="136/146" checked="checked">
+                <label class="filter" for="136/146">УКВ - 136..146 МГц
+                </label>
+                <input type="checkbox" id="430/440" checked="checked">
+                <label class="filter" for="430/440">УКВ - 430...440 МГц</label>
+                <input type="checkbox" id="400-402" checked="checked">
+                <label class="filter" for="400-402">УКВ - 400-402 МГц
+                </label>
+                <input type="checkbox" id="1" checked="checked">
+                <label class="filter" for="1">X-диапазон 8 ГГц </label>
+                <input type="checkbox" id="1" checked="checked">
+                <label class="filter" for="1">X-диапазон 10 ГГц
+                </label>
+            </div>
+        </div>
+-->
+
+
+        <!--
+        <div class="listing-group-li">
+            <div class="listing-group-title">
+                <input class="title" type="checkbox" id="1" checked="checked">
+                <label for="1">По частоте</label>
+            </div>
+            <div class="listing-group-filter">
+                <input type="checkbox" id="1" checked="checked">
+                <label for="1">прием</label>
+                <input type="checkbox" id="1" checked="checked">
+                <label for="1">передача</label>
+                <input type="checkbox" id="1" checked="checked">
+                <label for="1">Унискан</label>
+                <input type="checkbox" id="1" checked="checked">
+                <label for="1">Вьюнок</label>
+            </div>
+        </div>
+-->
+
+        <!--
+            <input type="checkbox" id="2" checked="checked">
+            <label for="2">Информация 2</label>
+
+            <input type="checkbox" id="0" checked="checked">
+            <label for="0">Информация 3</label>
+
+            <input type="checkbox" id="4" checked="checked">
+            <label for="4">Информация 4</label>
+
+            <input type="checkbox" id="5" checked="checked">
+            <label for="5">Информация 5</label>
+-->
     </nav>
 
-    <script>
+    <!--
         //        var fs = require('fs')
 
 
@@ -204,306 +149,9 @@
         //                console.log(data)
         //            }
         //        })
+-->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+    <script src="./map.js"></script>
+</body>
 
-        const navGroup = document.querySelector(".listing-group")
-
-
-
-
-
-        mapboxgl.accessToken = "pk.eyJ1IjoiaG9va2FobG9jYXRvciIsImEiOiI5WnJEQTBBIn0.DrAlI7fhFaYr2RcrWWocgw";
-
-        const map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/hookahlocator/cl7kyr6xl003614mdm198bykj',
-            center: [55.751244, 37.618423],
-            zoom: 3.7
-        })
-
-        //        const filterGroup = document.getElementById('filter-group');
-        //
-        //        for (let i = 0; i < 4; i++) {
-        //            const dataId = `инфомрация ${i}`
-        //
-        //            const input = document.createElement('input');
-        //            input.type = 'checkbox';
-        //            input.id = dataId;
-        //            input.checked = true;
-        //            filterGroup.appendChild(input);
-        //
-        //            const label = document.createElement('label');
-        //            label.setAttribute('for', i);
-        //            label.textContent = dataId;
-        //            filterGroup.appendChild(label);
-        //        }
-
-
-
-
-        const images = [{
-                imageUrl: './icons/4.png',
-                id: 4
-            },
-            {
-                imageUrl: './icons/0.png',
-                id: 0
-            },
-            {
-                imageUrl: './icons/1.png',
-                id: 1
-            },
-            {
-                imageUrl: './icons/2.png',
-                id: 2
-            },
-            {
-                imageUrl: './icons/5.png',
-                id: 5
-            },
-        ]
-
-        Promise.all(
-                images.map(img => new Promise((resolve, reject) => {
-                    map.loadImage(img.imageUrl, function(error, res) {
-                        map.addImage(img.id, res)
-                        resolve();
-                    })
-                }))
-            )
-            .then(function() {
-
-
-
-
-                map.addSource('towers', {
-                    type: 'geojson',
-                    data: './features.geojson',
-                    cluster: true,
-                    clusterMaxZoom: 14,
-                    clusterRadius: 50,
-                    clusterMinPoints: 2
-                })
-
-
-                // draw circle for every icon 
-                map.addLayer({
-                    id: 'unclustered-point-circle',
-                    type: 'circle',
-                    source: 'towers',
-                    paint: {
-                        'circle-color': '#E9F1F1',
-                        'circle-radius': 20
-                    }
-                })
-
-                //icons differeint 
-                map.addLayer({
-                    id: 'unclustered-point',
-                    type: 'symbol',
-                    source: 'towers',
-                    //                    filter: ['==', 'icon', 1],
-                    layout: {
-                        'icon-image': ['get', 'icon'],
-                        'icon-size': 0.5,
-                        'icon-allow-overlap': true,
-                    }
-                })
-
-
-                map.addLayer({
-                    id: 'clusters-count-bg',
-                    type: 'circle',
-                    source: 'towers',
-                    filter: ['has', 'point_count'],
-                    paint: {
-                        'circle-color': '#E9F1F1',
-                        'circle-radius': [
-                            'step',
-                            ['get', 'point_count'],
-                            23,
-                            5,
-                            27,
-                            10,
-                            30
-                        ]
-                    }
-                })
-
-                map.addLayer({
-                    id: 'clusters',
-                    type: 'symbol',
-                    source: 'towers',
-                    filter: ['has', 'point_count'],
-                    layout: {
-                        'icon-image': '5',
-                        'icon-allow-overlap': true,
-                        'icon-size': [
-                            'step',
-                            ['get', 'point_count'],
-                            0.7,
-                            5,
-                            0.85,
-                            10,
-                            1
-                        ]
-                    }
-                })
-
-                map.addLayer({
-                    id: 'cluster-count',
-                    type: 'symbol',
-                    source: 'towers',
-                    filter: ['has', 'point_count'],
-                    layout: {
-                        'text-field': 'x{point_count_abbreviated}',
-                        'text-size': 12,
-                        'text-font': ['Arial Unicode MS Regular'],
-                        // 'placement': "bottom-start"
-                        'text-offset': [
-                            'step',
-                            ['get', 'point_count'],
-                            ['literal', [1, 0.75]],
-                            5,
-                            ['literal', [1.25, 1]],
-                            10,
-                            ['literal', [1.5, 1.25]]
-                        ],
-                    },
-                    paint: {
-                        'text-color': '#2D73E8',
-                    }
-                })
-
-                //                map.on('click', 'unclustered-point', (e) => {
-                //                    console.log('hey, красавчик')
-                //                })
-
-                map.on('click', 'unclustered-point', (e) => {
-                    // Copy coordinates array.
-                    const coordinates = e.features[0].geometry.coordinates.slice();
-                    const description = e.features[0].properties.title;
-
-                    let information = Object.values(e.features[0].properties);
-                    //                    information.pop().pop();
-                    console.log(e.features[0].properties);
-
-                    //                    console.log(coordinates, description);
-
-                    // Ensure that if the map is zoomed out such that multiple
-                    // copies of the feature are visible, the popup appears
-                    // over the copy being pointed to.
-                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-                    }
-
-                    new mapboxgl.Popup()
-                        .setLngLat(coordinates)
-                        .setHTML(`<div class="popup">${description}<\div>`)
-                        .addTo(map);
-                })
-
-
-                // Change the cursor to a pointer when the mouse is over the places layer.
-                map.on('mouseenter', 'towers', () => {
-                    map.getCanvas().style.cursor = 'pointer';
-                });
-
-                // Change it back to a pointer when it leaves.
-                map.on('mouseleave', 'towers', () => {
-                    map.getCanvas().style.cursor = '';
-                });
-
-
-                //                fetch("./features.geojson")
-                //                    .then(res => res.json())
-                //                    .then(data => mata = data).then(() => console.log(mata))
-                //                    .then(() => {
-                //                        console.log('hello')
-                //
-                //
-                //                        //                data[]
-                //                        //                map.getSource('towers').setData()
-                //
-                //                    })
-                //                map.setFilter(
-                //                    ['unclustered-point'], ['all', ['==', 'icon', '0']]
-                //                );
-                //                map.setFilter(
-                //                    ['unclustered-point-circle'], ['all', ['==', 'icon', '0']]
-                //                );
-                //                map.setFilter(
-                //                    ['clusters-count-bg'], ['all', ['==', 'icon', '0']]
-                //                );
-                //                map.setFilter(
-                //                    ['clusters'], ['all', ['==', 'icon', '0']]
-                //                );
-                //                map.setFilter(
-                //                    ['cluster-count'], ['all', ['==', 'icon', '0']]
-                // );
-
-                // const filterIcon = 4;
-                //
-                // filterAllLayers();
-                //
-                // function filterAllLayers() {
-                //
-                // }
-
-            })
-
-
-        fetch("./features.geojson")
-            .then(res => res.json())
-            .then(data => mata = data).then(() => console.log(mata))
-            .then(() => {
-
-                const inputs = document.querySelectorAll('input')
-
-                navGroup.addEventListener('change', (e) => {
-                    console.log('hello')
-                    console.log(mata.features)
-                    //                    console.log(inputGroup)
-
-                    let conditions = [];
-                    let maga = []
-
-                    for (input of inputs) {
-                        if (input.checked) {
-                            conditions.push(input.id)
-                        }
-                        //                        input.checked = true;
-                    }
-                    console.log(conditions)
-                    mata.features.forEach((el) => {
-                        //                        console.log(el.properties.icon)
-                        for (condition of conditions) {
-                            if (condition == el.properties.icon)
-                                maga.push(el)
-                        }
-                        //                        conditions.includes(el.properties.icon)
-                    })
-                    console.log(maga)
-                    map.getSource('towers').setData({
-                        "type": "FeatureCollection",
-                        "features": maga
-                    })
-
-
-                })
-
-                //                data[]
-
-            })
-
-
-
-        //        for (input of inputGroup) {
-        //            input.addEventListener('change', (e) => {
-        //                console.log('hello');
-        //            })
-        //
-        //        }
-
-        //        console.log(mata)
-    </script>
-</body></html>
+</html>
