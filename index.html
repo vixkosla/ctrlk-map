@@ -13,12 +13,12 @@
 <body>
     <div id="map"></div>
     <nav id="listing-group" class="listing-group">
-       
+
         <div class="listing-group-li">
             <div class="listing-group-title">
                 <input class="title" type="checkbox" id="status">
                 <label for="status">Статус</label>
-                
+
             </div>
             <div class="listing-group-filter status">
 
@@ -39,61 +39,68 @@
                 <label for="mode">По приему/передаче</label>
             </div>
             <div class="listing-group-filter mode">
-               
+
                 <input class="filter" data-filtername="mode" type="checkbox" id="Прием" checked="checked">
                 <label for="Прием">Прием</label>
 
                 <input class="filter" data-filtername="mode" type="checkbox" id="Прием/Передача" checked="checked">
                 <label for="Прием/Передача">Прием/Передача</label>
-                
+
             </div>
         </div>
 
-        
+
         <div class="listing-group-li">
             <div class="listing-group-title">
                 <input class="title" type="checkbox" id="type">
                 <label for="type">Тип станции</label>
             </div>
             <div class="listing-group-filter type">
-               
+
                 <input data-filtername="type" class="filter" type="checkbox" id="Завиток" checked="checked">
                 <label for="Завиток">Завиток</label>
-                
+
                 <input data-filtername="type" class="filter" type="checkbox" id="Завиток-М" checked="checked">
                 <label for="Завиток-М">Завиток-М</label>
-                
+
                 <input data-filtername="type" class="filter" type="checkbox" id="Унискан" checked="checked">
                 <label for="Унискан">Унискан</label>
-                
+
                 <input data-filtername="type" class="filter" type="checkbox" id="Вьюнок" checked="checked">
                 <label for="Вьюнок">Вьюнок</label>
             </div>
         </div>
 
-<!--
         <div class="listing-group-li">
-            <div id="По частоте" class="listing-group-title">
-                <input class="title" type="checkbox" id="По частоте" checked="checked">
-                <label class="title" for="1">По частоте</label>
+            <div class="listing-group-title">
+                <input class="title" type="checkbox" id="frequencies">
+                <label for="frequencies">По частоте</label>
             </div>
-            <div id="По частоте" class="listing-group-filter">
-                <input type="checkbox" id="136/146" checked="checked">
-                <label class="filter" for="136/146">УКВ - 136..146 МГц
+            <div class="listing-group-filter frequencies">
+
+                <input data-filtername="frequencies" class="filter" type="checkbox" id=" 136-146 " checked="checked">
+                <label for=" 136-146 ">136-146 МГц
                 </label>
-                <input type="checkbox" id="430/440" checked="checked">
-                <label class="filter" for="430/440">УКВ - 430...440 МГц</label>
-                <input type="checkbox" id="400-402" checked="checked">
-                <label class="filter" for="400-402">УКВ - 400-402 МГц
+
+                <input data-filtername="frequencies" class="filter" type="checkbox" id=" 401-402 " checked="checked">
+                <label for=" 401-402 ">401-402 МГц</label>
+
+                <input data-filtername="frequencies" class="filter" type="checkbox" id=" 435-438 " checked="checked">
+                <label for=" 435-438 ">435-438 МГц
                 </label>
-                <input type="checkbox" id="1" checked="checked">
-                <label class="filter" for="1">X-диапазон 8 ГГц </label>
-                <input type="checkbox" id="1" checked="checked">
-                <label class="filter" for="1">X-диапазон 10 ГГц
+
+                <input data-filtername="frequencies" class="filter" type="checkbox" id=" 1-2 " checked="checked">
+                <label for=" 1-2 ">1-2 ГГц</label>
+
+                <input data-filtername="frequencies" class="filter" type="checkbox" id=" 8 " checked="checked">
+                <label for=" 8 ">8 ГГц
+                </label>
+
+                <input data-filtername="frequencies" class="filter" type="checkbox" id=" 10 " checked="checked">
+                <label for=" 10 ">10 ГГц
                 </label>
             </div>
         </div>
--->
 
 
         <!--

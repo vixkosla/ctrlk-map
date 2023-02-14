@@ -308,7 +308,7 @@ fetch("./features.geojson")
                 //                    //                        input.checked = true;
                 //                }
 
-                let filtersName = ['status', 'mode', 'type']
+                let filtersName = ['status', 'mode', 'type', 'frequencies']
                 //                let inputs = []
 
                 filtersName.forEach(filter => {
@@ -344,11 +344,23 @@ fetch("./features.geojson")
                     if (conditions.every((condition, index) => {
 
                             console.log(condition)
-                            return condition.some(c => {
-                                console.log(c)
-                                console.log(res.properties[filtersName[index]])
 
-                                return c == res.properties[filtersName[index]]
+
+                            return condition.some(c => {
+//                                console.log(c)
+//                                console.log(res.properties[filtersName[index]])
+
+
+                                if (filtersName[index] == 'frequencies') {
+                                    return condition.some(fre => {
+                                        console.log(fre)
+                                        console.log(res.properties['frequencies'])
+                                        return res.properties['frequencies'].includes(fre)
+                                    })
+                                    //res.properties[filtersName[index].]
+                                } else {
+                                    return c == res.properties[filtersName[index]]
+                                }
                                 //                                return c.toLowerCase()==res.properties[filtersName[index].toLowerCase()]
                             })
                             //                            console.log(index)
@@ -437,7 +449,7 @@ fetch("./features.geojson")
                 console.log(maga)
                 map.getSource('towers').setData({
                     "type": "FeatureCollection",
-                    "features": maga
+                    "features": result
                 })
             }
 
