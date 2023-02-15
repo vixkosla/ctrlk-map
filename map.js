@@ -270,11 +270,6 @@ fetch("./features.geojson")
 
         navGroup.addEventListener('change', (e) => {
 
-
-            //    console.log(e.target.classList)
-            console.log(e.target)
-            console.log(inputsFilterBoxes)
-
             if (e.target.classList == 'title') {
                 inputsFilterBoxes.forEach((el, i) => {
                     if (el.classList[1] == e.target.id) {
@@ -296,20 +291,8 @@ fetch("./features.geojson")
             if (e.target.classList == 'filter') {
 
                 let conditions = [];
-                let maga = []
-
-                //                for (input of inputsFilters) {
-                //                    if (input.checked) {
-                //                        conditions.push({
-                //                            title: input.dataset.filtername,
-                //                            value: input.id
-                //                        })
-                //                    }
-                //                    //                        input.checked = true;
-                //                }
 
                 let filtersName = ['status', 'mode', 'type', 'frequencies']
-                //                let inputs = []
 
                 filtersName.forEach(filter => {
 
@@ -326,134 +309,27 @@ fetch("./features.geojson")
                     conditions.push(arr)
                 })
 
-                //                let obj = {}
-                //                let arr = []
-                //                
-                //                for (condition of conditions) {
-                //                    arr.push(condition.filterName)
-                //                }
+                const result = mata.features.filter((res, i) => conditions.every((condition, index) => {
 
+                    return condition.some(c => {
 
-
-                //                conditions.
-
-                console.log(conditions)
-
-                const result = mata.features.filter((res, i) => {
-                    console.log(i)
-                    if (conditions.every((condition, index) => {
-
-                            console.log(condition)
-
-
-                            return condition.some(c => {
-//                                console.log(c)
-//                                console.log(res.properties[filtersName[index]])
-
-
-                                if (filtersName[index] == 'frequencies') {
-                                    return condition.some(fre => {
-                                        console.log(fre)
-                                        console.log(res.properties['frequencies'])
-                                        return res.properties['frequencies'].includes(fre)
-                                    })
-                                    //res.properties[filtersName[index].]
-                                } else {
-                                    return c == res.properties[filtersName[index]]
-                                }
-                                //                                return c.toLowerCase()==res.properties[filtersName[index].toLowerCase()]
-                            })
-                            //                            console.log(index)
-                            //                            console.log(condition.some(e => e == e))
-                            //                            console.log(res.properties[filtersName[index]])
-
-                            //                            if (condition.some(con => {
-                            //                                    console.log(con)
-                            //                                con == con
-                            //
-                            //                                    con.toLowerCase() == res.properties[filtersName[index].toLowerCase()].toLowerCase()
-                            //                                })) {
-                            //                                                                console.log(con)
-                            //                                return true
-                            //                            }
-
-                            //                            condition.some(filtersVal =>
-                            //                                filtersVal == filtersVal
-                            //                            console.log(filtersVal)
-                            //                            return true
-                            //                            console.log(filtersVal)
-                            //                            console.log(res.properties[filtersName[index]])
-                            //                            )
-
-                        })) {
-                        console.log('d       dddddddddddd         done')
-                        return true
-                    } else {
-                        console.log('un      ddddddddddd         cancel')
-                    }
-                })
-
+                        if (filtersName[index] == 'frequencies') {
+                            return condition.some(fre => res.properties['frequencies'].includes(fre))
+                        } else {
+                            return c == res.properties[filtersName[index]]
+                        }
+                    })
+                }))
+                
                 console.log(result)
 
-                mata.features.forEach((el) => {
-
-
-
-                    if (conditions.every((filter, index) => {
-                            //                            console.log(filter, index)
-
-                            //                            if (condition.some(filter => {
-                            //                                    if (filter == el.properties[filtersName[index]]) {
-                            //                                        console.log(filter)
-                            //                                        console.log(el.properties[filtersName[index]])
-                            //                                        console.log('hey')
-                            //                                        return true
-                            //                                    }
-                            //                                })) {
-                            //                                console.log(condition, index)
-                            //                                console.log('hoy')
-                            //                                return true
-                            //                            }
-
-                            //                            for (co of condition) {
-                            //                                console.log(coo)
-                            //                                if (co == el.properties[filtersName[index]])
-                            //                                    return true
-                            //                            }
-
-                            //                        console.log(condition, index)
-                            //                        return true
-                            //                            condition.value == el.properties[condition.title]
-                        })) {
-                        //                        if (!maga.includes(el)) {
-                        //                            maga.push(el)
-                        //                            console.log('waz')
-                        //
-                        //                        }
-                        maga.push(el)
-                    }
-
-                    //                    for (condition of conditions) {
-                    //
-                    ////                        console.log(condition.title)
-                    ////                        console.log(el.properties[condition.title])
-                    //
-                    //
-                    //                        if (condition.value == el.properties[condition.title])
-                    //                            if (!maga.includes(el))
-                    //                                maga.push(el)
-                    //                    }
-                    //                        conditions.includes(el.properties.icon)
-                })
-
-                console.log(maga)
                 map.getSource('towers').setData({
                     "type": "FeatureCollection",
                     "features": result
                 })
             }
-
         })
+
     })
 
 //function checkRepeat(el, arr) {
