@@ -170,6 +170,19 @@ Promise.all(
             //                    console.log('hey, красавчик')
             //                })
 
+            const popupsName = ['title', 'mode', 'adress', 'range', 'frequencies', 'status']
+
+//            Название станции
+//            Координаты -
+//            Комплектация
+//            Режимы работы
+//            Где находится, адрес
+//            Позывной
+//            Частотный диапаз, он
+//            Частоты, МГц
+//            Статус
+
+
             map.on('click', 'unclustered-point', (e) => {
                 // Copy coordinates array.
                 const coordinates = e.features[0].geometry.coordinates.slice();
@@ -179,15 +192,25 @@ Promise.all(
                 let information = Object.values(e.features[0].properties);
                 //                    information.pop().pop();
                 console.log(e.features[0].properties);
+                
+                let popupText = '<ul>'
+                
+//                popupText += `<li>${coordinates}</li>`
 
-                //                    console.log(coordinates, description);
-
-                // Ensure that if the map is zoomed out such that multiple
-                // copies of the feature are visible, the popup appears
-                // over the copy being pointed to.
-                while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                for (data of popupsName) {
+                    popupText += `<li>${description[data]}<li>`
                 }
+                
+                popupText += '\<ul>'
+
+                    //                    console.log(coordinates, description);
+
+                    // Ensure that if the map is zoomed out such that multiple
+                    // copies of the feature are visible, the popup appears
+                    // over the copy being pointed to.
+                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                    }
 
                 //                    let 
                 //                    
@@ -197,7 +220,7 @@ Promise.all(
 
                 new mapboxgl.Popup()
                     .setLngLat(coordinates)
-                    .setHTML(`<div class="popup">${description.title}</br> ${description.adress} </br> ${description.range}, ${description.status}<\div>`)
+                    .setHTML(`<div>${popupText}</div>`)
                     .addTo(map);
             })
 
@@ -320,7 +343,7 @@ fetch("./features.geojson")
                         }
                     })
                 }))
-                
+
                 console.log(result)
 
                 map.getSource('towers').setData({
