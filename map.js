@@ -170,17 +170,35 @@ Promise.all(
             //                    console.log('hey, красавчик')
             //                })
 
-            const popupsName = ['title', 'mode', 'adress', 'range', 'frequencies', 'status']
+            const popupsName = [{
+                key: 'title',
+                name: ''
+            }, {
+                key: 'mode',
+                name: 'режим'
+            }, {
+                key: 'adress',
+                name: 'адрес'
+            }, {
+                key: 'range',
+                name: 'диапозон'
+            }, {
+                key: 'frequencies',
+                name: 'частоты'
+            }, {
+                key: 'status',
+                name: 'статус'
+            }]
 
-//            Название станции
-//            Координаты -
-//            Комплектация
-//            Режимы работы
-//            Где находится, адрес
-//            Позывной
-//            Частотный диапаз, он
-//            Частоты, МГц
-//            Статус
+            //            Название станции
+            //            Координаты -
+            //            Комплектация
+            //            Режимы работы
+            //            Где находится, адрес
+            //            Позывной
+            //            Частотный диапаз, он
+            //            Частоты, МГц
+            //            Статус
 
 
             map.on('click', 'unclustered-point', (e) => {
@@ -192,25 +210,25 @@ Promise.all(
                 let information = Object.values(e.features[0].properties);
                 //                    information.pop().pop();
                 console.log(e.features[0].properties);
-                
+
                 let popupText = '<ul>'
-                
-//                popupText += `<li>${coordinates}</li>`
+
+                //                popupText += `<li>${coordinates}</li>`
 
                 for (data of popupsName) {
-                    popupText += `<li>${description[data]}<li>`
+                    popupText += `<li><span>${data['name']}</span>${description[data['key']]}<li>`
                 }
-                
+
                 popupText += '\<ul>'
 
-                    //                    console.log(coordinates, description);
+                //                    console.log(coordinates, description);
 
-                    // Ensure that if the map is zoomed out such that multiple
-                    // copies of the feature are visible, the popup appears
-                    // over the copy being pointed to.
-                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-                    }
+                // Ensure that if the map is zoomed out such that multiple
+                // copies of the feature are visible, the popup appears
+                // over the copy being pointed to.
+                while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                }
 
                 //                    let 
                 //                    
