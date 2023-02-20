@@ -9,7 +9,7 @@ mapboxgl.accessToken = "pk.eyJ1IjoiaG9va2FobG9jYXRvciIsImEiOiI5WnJEQTBBIn0.DrAlI
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/hookahlocator/cl7kyr6xl003614mdm198bykj',
-    center: [55.751244, 37.618423],
+    center: [43.751244, 50.618423],
     zoom: 3.7
 })
 
@@ -149,7 +149,7 @@ Promise.all(
                 layout: {
                     'text-field': 'x{point_count_abbreviated}',
                     'text-size': 12,
-                    'text-font': ['Arial Unicode MS Regular'],
+                    'text-font': ['Montserrat Regular'],
                     // 'placement': "bottom-start"
                     'text-offset': [
                             'step',

@@ -13,6 +13,7 @@ body {
 /* POPUP */
 
 .mapboxgl-popup {
+/*    font-family: 'Montserrat', sans-serif;*/
     /*            width: 400px;*/
     /*    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;*/
     /*            background-color: aqua;*/
@@ -31,6 +32,7 @@ body {
     padding-left: 0;
     margin: 0;
     font: 12px/18px "Arial Unicode MS", Helvetica;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .mapboxgl-popup li {
@@ -51,7 +53,7 @@ body {
 }
 
 .mapboxgl-popup li:first-child {
-    font: 12px/20px "Arial Unicode MS", Helvetica;
+    font: 12px/20px "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 14px;
 /*    margin-bottom: 2px;*/
@@ -142,6 +144,8 @@ body {
 /*        .mapxboxgl-popup-content {}*/
 .listing-group {
     font: 12px/20px "Arial Unicode MS", Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
     font-weight: 400;
     position: absolute;
     top: 10px;
