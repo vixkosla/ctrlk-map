@@ -200,6 +200,23 @@ Promise.all(
             //            Частоты, МГц
             //            Статус
 
+            map.on('click', 'clusters', (e) => {
+                const features = map.queryRenderedFeatures(e.point, {
+                    layers: ['clusters']
+                });
+                const clusterId = features[0].properties.cluster_id;
+                map.getSource('towers').getClusterExpansionZoom(
+                    clusterId,
+                    (err, zoom) => {
+                        if (err) return;
+
+                        map.easeTo({
+                            center: features[0].geometry.coordinates,
+                            zoom: zoom
+                        });
+                    }
+                );
+            });
 
             map.on('click', 'unclustered-point', (e) => {
                 // Copy coordinates array.
@@ -216,7 +233,7 @@ Promise.all(
                 //                popupText += `<li>${coordinates}</li>`
 
                 for (data of popupsName) {
-                    popupText += `<li><span>${data['name']}</span>${description[data['key']]}<li>`
+                    popupText += `<li><span>${data['name']}</span> ${description[data['key']]}<li>`
                 }
 
                 popupText += '\<ul>'
