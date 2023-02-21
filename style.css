@@ -229,17 +229,19 @@ body {
 
 .listing-group-filter input[type='checkbox'] + label:hover,
 .listing-group-filter input[type='checkbox']:checked + label {
-    background-color: #3987db;
+    background-color: #2e73e7;
 
 }
 
 .listing-group-filter input[type='checkbox'] + label {
     background-color: #4093ed;
     padding: 5px;
-    /*    font-size: 12px;*/
+        font-size: 10px;
 }
 
 /*.listing-group-filter input[type='checkbox']:checked + label {}*/
+
+/*.listing-group-filter input[type='checkbox'] + label  */
 
 .listing-group-filter input[type='checkbox']:checked + label:before {
     content: '⬝';
