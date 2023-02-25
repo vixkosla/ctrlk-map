@@ -34,24 +34,64 @@ const map = new mapboxgl.Map({
 
 
 const images = [{
-        imageUrl: './icons/4.png',
-        id: 4
+        imageUrl: './icons/4A.png',
+        id: '4Активная'
             },
     {
-        imageUrl: './icons/0.png',
-        id: 0
+        imageUrl: './icons/0A.png',
+        id: '0Активная'
             },
     {
-        imageUrl: './icons/1.png',
-        id: 1
+        imageUrl: './icons/1A.png',
+        id: '1Активная'
             },
     {
-        imageUrl: './icons/2.png',
-        id: 2
+        imageUrl: './icons/2A.png',
+        id: '2Активная'
             },
     {
-        imageUrl: './icons/5.png',
-        id: 5
+        imageUrl: './icons/5A.png',
+        id: '5Активная'
+            },
+    {
+        imageUrl: './icons/4B.png',
+        id: '4В Процессе'
+            },
+    {
+        imageUrl: './icons/0B.png',
+        id: "0В Процессе"
+            },
+    {
+        imageUrl: './icons/1B.png',
+        id: "1В Процессе"
+            },
+    {
+        imageUrl: './icons/2B.png',
+        id: "2В Процессе"
+            },
+    {
+        imageUrl: './icons/5B.png',
+        id: "5В Процессе"
+            },
+    {
+        imageUrl: './icons/4C.png',
+        id: '4В планах'
+            },
+    {
+        imageUrl: './icons/0C.png',
+        id: "0В планах"
+            },
+    {
+        imageUrl: './icons/1C.png',
+        id: "1В планах"
+            },
+    {
+        imageUrl: './icons/2C.png',
+        id: "2В планах"
+            },
+    {
+        imageUrl: './icons/5C.png',
+        id: "5В планах"
             },
         ]
 
@@ -95,7 +135,7 @@ Promise.all(
                 source: 'towers',
                 //                    filter: ['==', 'icon', 1],
                 layout: {
-                    'icon-image': ['get', 'icon'],
+                    'icon-image': ['concat', ['get', 'icon'], ['get', 'status']],
                     'icon-size': 0.5,
                     'icon-allow-overlap': true,
                 }
@@ -127,7 +167,7 @@ Promise.all(
                 source: 'towers',
                 filter: ['has', 'point_count'],
                 layout: {
-                    'icon-image': '5',
+                    'icon-image': '5Активная',
                     'icon-allow-overlap': true,
                     'icon-size': [
                             'step',
