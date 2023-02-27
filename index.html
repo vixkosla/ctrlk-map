@@ -30,6 +30,7 @@
     </div>
     <nav id="listing-group" class="listing-group">
 
+<!--
         <div class="listing-group-li">
             <div class="listing-group-title">
                 <input class="title" type="checkbox" id="status">
@@ -48,6 +49,7 @@
                 <label class="filter" for="В планах">В планах</label>
             </div>
         </div>
+-->
 
         <div class="listing-group-li">
             <div class="listing-group-title">
@@ -59,8 +61,8 @@
                 <input class="filter" data-filtername="mode" type="checkbox" id="Прием" checked="checked">
                 <label for="Прием">Прием</label>
 
-                <input class="filter" data-filtername="mode" type="checkbox" id="Прием/Передача" checked="checked">
-                <label for="Прием/Передача">Прием/Передача</label>
+                <input class="filter" data-filtername="mode" type="checkbox" id="Передача" checked="checked">
+                <label for="Передача">Передача</label>
 
             </div>
         </div>
@@ -117,62 +119,7 @@
                 </label>
             </div>
         </div>
-
-
-        <!--
-        <div class="listing-group-li">
-            <div class="listing-group-title">
-                <input class="title" type="checkbox" id="1" checked="checked">
-                <label for="1">По частоте</label>
-            </div>
-            <div class="listing-group-filter">
-                <input type="checkbox" id="1" checked="checked">
-                <label for="1">прием</label>
-                <input type="checkbox" id="1" checked="checked">
-                <label for="1">передача</label>
-                <input type="checkbox" id="1" checked="checked">
-                <label for="1">Унискан</label>
-                <input type="checkbox" id="1" checked="checked">
-                <label for="1">Вьюнок</label>
-            </div>
-        </div>
--->
-
-        <!--
-            <input type="checkbox" id="2" checked="checked">
-            <label for="2">Информация 2</label>
-
-            <input type="checkbox" id="0" checked="checked">
-            <label for="0">Информация 3</label>
-
-            <input type="checkbox" id="4" checked="checked">
-            <label for="4">Информация 4</label>
-
-            <input type="checkbox" id="5" checked="checked">
-            <label for="5">Информация 5</label>
--->
     </nav>
-
-    <!--
-        //        var fs = require('fs')
-
-
-        //        console.log(mata['features'])
-
-        //        let marray = mata.features.filter(el = el.icon == '1')
-        //        console.log(marray);
-
-
-
-
-
-        //        fs.readFile("./features.geojson", (err, data) => {
-        //            if (err) throw err;
-        //            else {
-        //                console.log(data)
-        //            }
-        //        })
--->
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
     <script src="./map.js"></script>
 </body>

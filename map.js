@@ -390,7 +390,7 @@ fetch("./features.geojson")
 
                 let conditions = [];
 
-                let filtersName = ['status', 'mode', 'type', 'frequencies']
+                let filtersName = [ 'mode', 'type', 'frequencies']
 
                 filtersName.forEach(filter => {
 
@@ -413,6 +413,9 @@ fetch("./features.geojson")
 
                         if (filtersName[index] == 'frequencies') {
                             return condition.some(fre => res.properties['frequencies'].includes(fre))
+                        } else if (filtersName[index] == 'mode') {
+                            return condition.some(mo => 
+                            res.properties['mode'].includes(mo))
                         } else {
                             return c == res.properties[filtersName[index]]
                         }
