@@ -316,6 +316,10 @@ body {
     padding-bottom: 4px;
 }
 
+.mode input[type='checkbox']:first-child + label {
+/*    display: none;*/
+} 
+
 
 
 /*
