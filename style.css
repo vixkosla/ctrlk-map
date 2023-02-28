@@ -318,6 +318,9 @@ body {
 
 .mode input[type='checkbox']:first-child + label {
 /*    display: none;*/
+/*    visibility: hidden;*/
+/*    z-index: -2;*/
+/*    position: absolute;*/
 } 
 
 

@@ -390,7 +390,7 @@ fetch("./features.geojson")
 
                 let conditions = [];
 
-                let filtersName = [ 'mode', 'type', 'frequencies']
+                let filtersName = ['type', 'frequencies']
 
                 filtersName.forEach(filter => {
 
@@ -407,20 +407,29 @@ fetch("./features.geojson")
                     conditions.push(arr)
                 })
 
-                const result = mata.features.filter((res, i) => conditions.every((condition, index) => {
+                let result = mata.features.filter((res, i) => conditions.every((condition, index) => {
 
                     return condition.some(c => {
 
                         if (filtersName[index] == 'frequencies') {
                             return condition.some(fre => res.properties['frequencies'].includes(fre))
-                        } else if (filtersName[index] == 'mode') {
-                            return condition.some(mo => 
-                            res.properties['mode'].includes(mo))
                         } else {
                             return c == res.properties[filtersName[index]]
                         }
                     })
                 }))
+
+                const inputControl = document.querySelector('#Передача')
+                
+//                console.log(inputControl)
+
+//                let rresult = []
+
+                if (!inputControl.checked) {
+                    result = result.filter((res, i) => {
+                        return !res.properties['mode'].includes('Передача')
+                    })
+                }
 
                 console.log(result)
 
