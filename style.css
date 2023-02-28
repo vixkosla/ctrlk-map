@@ -292,7 +292,7 @@ body {
 }
 
 .listing-group-filter input[type='checkbox']:checked + label {
-    box-shadow: inset 1px 1px 1px #305da5;
+    box-shadow: inset 0px 1px 1px #305da5;
 }
 
 .listing-group-filter input[type='checkbox'] + label {
