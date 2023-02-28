@@ -429,6 +429,8 @@ fetch("./features.geojson")
                     result = result.filter((res, i) => {
                         return !res.properties['mode'].includes('Передача')
                     })
+//                } else {
+//                    rresult = [...result]
                 }
 
                 console.log(result)
